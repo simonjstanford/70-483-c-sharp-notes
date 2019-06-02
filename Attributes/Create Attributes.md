@@ -5,11 +5,9 @@
     * The 'Type' type
     * An enum
     * A one-dimensional array of any of the above
-  * All properties must be statically evaluate-able.
+  * All properties must be statically evaluate-able. 
 
-  
-
- **The AttributeUsage Attribute**
+## The AttributeUsage Attribute
 
 Has several properties:
 
@@ -43,5 +41,5 @@ Has several properties:
 
 [AttributesExample.zip](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/AttributesExample.zip)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTcxMzM1ODRdfQ==
+eyJoaXN0b3J5IjpbLTEyMzY2NDkzNDRdfQ==
 -->
