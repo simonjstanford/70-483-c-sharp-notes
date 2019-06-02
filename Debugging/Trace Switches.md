@@ -41,17 +41,9 @@ Used to set the level of tracing. You can define custom trace messages for diffe
  
 The level of information can be set using the TraceLevel enumeration which is used in the TraceSwitch.Level property. This property is readonly - it is set in config or instantiation. Default level is TraceLevel.Off. From .NET 2.0 you are able to use the text value for the value - Off, Error, Warning, etc.
 
-| **Enumerated value** | Integer value |  |
-|--|--|  |
-|  |  |  |
-  
+| **Enumerated value** | Integer value | Type of message displayed (or written to a specified output
+target)   |
 
-
- 
-
- Type of message displayed (or written to a specified output
-target)  
----|---|---  
 Off| 0| None  
 Error| 1| Only error messages  
 Warning| 2| Warning messages and error messages  
@@ -122,5 +114,5 @@ public static void Main( )
 >source-url: https://msdn.microsoft.com/en-us/library/3at424ac.aspx  
 >source-application: evernote.win32  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwODE0NDQzNF19
+eyJoaXN0b3J5IjpbMTc2NDY1MjM5M119
 -->
