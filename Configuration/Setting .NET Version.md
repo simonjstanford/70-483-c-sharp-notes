@@ -1,8 +1,6 @@
 # Setting .NET Version
 
-An application runs on the .NET version that it was built with, but for
-desktop applications this can be changed by modifying the supportedRuntime
-element in app.config. This can't be done with Windows Store apps.
+An application runs on the .NET version that it was built with, but for desktop applications this can be changed by modifying the supportedRuntime element in app.config. This can't be done with Windows Store apps.
 
     <configuration>   
     	<startup>     
@@ -23,5 +21,5 @@ Rules:
   * If the .NET version that application was written in is not installed on the local machine and there is no supportedRuntime element set then the latest version of .NET is used. However, .NET applications of versions before 4.0 will not try to run on .NET 4 and newer. Instead, the user will be asked to install .NET 3.5. This can be overridden with a supportedRuntime entry.
   * You can use multiple supportedElement entries, in order of preference.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTgxNTg1NzddfQ==
+eyJoaXN0b3J5IjpbLTE5MTc4MDQyMDFdfQ==
 -->
