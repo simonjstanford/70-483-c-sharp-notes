@@ -60,7 +60,8 @@ There is no Add or Remove methods in CollectionBase - these are added as you
 see fit.
 
 Also see Indexers
-
+![Table 9-7](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/Table9-7.png)
+![Table 9-8](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/Table9-8.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkxMTYxNzM4XX0=
+eyJoaXN0b3J5IjpbNTE5NzEyMTI0LDM5MTE2MTczOF19
 -->
