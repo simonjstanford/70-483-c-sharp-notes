@@ -4,7 +4,6 @@ Trace switches are used to control what type of information is outputted when de
 
 There are two predefined classes that are used to create switches that are in the System.Diagnostics namespace.
 
-  
 
 ## BooleanSwitch
 
@@ -82,5 +81,5 @@ And then you can retrieve it in code and use it like this:
 
 <https://msdn.microsoft.com/en-us/library/3at424ac(v=vs.110).aspx>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyODg0MTkzNV19
+eyJoaXN0b3J5IjpbNzA1OTkzMjQ5XX0=
 -->
