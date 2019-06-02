@@ -1,137 +1,65 @@
 # TraceSource
 
-TraceSource was added in .NET 2.0 and should be used instead of the static
-Trace class. TraceSource is a way to output info from an application to a
-logging mechanism (a log file, Windows Event Viewer, etc.) while the
-application is running. This helps to debug an application in release mode.
+TraceSource was added in .NET 2.0 and should be used instead of the static Trace class. TraceSource is a way to output info from an application to a logging mechanism (a log file, Windows Event Viewer, etc.) while the application is running. This helps to debug an application in release mode.
 
-  
+Firstly, a System.Diagnostics section is added to the App.config file. The listener type is defined as a TextWriterTraceListener object which will output the logging to a file called myListener.log in the bin folder. The listener is waiting for all TraceEventTypes but you can be more specific. You can create as many sources as you like, e.g. one for each application layer and they could all output in different ways.
 
-Firstly, a System.Diagnostics section is added to the App.config file. The
-listener type is defined as a TextWriterTraceListener object which will output
-the logging to a file called myListener.log in the bin folder. The listener is
-waiting for all TraceEventTypes but you can be more specific. You can create
-as many sources as you like, e.g. one for each application layer and they
-could all output in different ways.
-
-  
-
-<?xml version="1.0" encoding="utf-8" ?>
-
-<configuration>
-
-  <startup>
-
-    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
-
-  </startup>
-
-  
-
-  <system.diagnostics>
-
-    <sources>
-
-      <source name="Log" switchValue="All" switchType="System.Diagnostics.SourceSwitch">
-
-        <listeners>
-
-          <add name="myListener"/>
-
-          <remove name="Default"/>
-
-        </listeners>
-
-      </source>
-
-    </sources>
-
-    <sharedListeners>
-
-      <add name="myListener"
-
-           type="System.Diagnostics.TextWriterTraceListener"
-
-           initializeData="myListener.log">
-
-      </add>
-
-    </sharedListeners>
-
-  </system.diagnostics>
-
-</configuration>
+    <?xml version="1.0" encoding="utf-8" ?>
+    <configuration>
+      <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+      </startup>
+    
+      <system.diagnostics>
+        <sources>
+          <source name="Log" switchValue="All" switchType="System.Diagnostics.SourceSwitch">
+            <listeners>
+              <add name="myListener"/>
+              <remove name="Default"/>
+            </listeners>
+          </source>
+        </sources>
+        <sharedListeners>
+          <add name="myListener"
+               type="System.Diagnostics.TextWriterTraceListener"
+               initializeData="myListener.log">
+          </add>
+        </sharedListeners>
+      </system.diagnostics>
+    </configuration>
 
   
 
 Then call the TraceSource object from code when you need it:
 
-  
-
-using System;
-
-using System.Diagnostics;
-
-  
-
-namespace DebugExample
-
-{
-
-    class Program
-
+    using System;
+    using System.Diagnostics;
+    
+    namespace DebugExample
     {
-
-        private static TraceSource traceSource = new TraceSource("Log");
-
-  
-
-        static void Main(string[] args)
-
+        class Program
         {
-
-            //'1' here is the event ID number - it has no inferred meaning so can be used to logically group your events
-
-            traceSource.TraceData(TraceEventType.Information, 1, "Logged!");
-
-  
-
-            //make sure the trace gets written
-
-            traceSource.Flush();
-
-            traceSource.Close();
-
-  
-
-            Console.Read();
-
+            private static TraceSource traceSource = new TraceSource("Log");
+    
+            static void Main(string[] args)
+            {
+                //'1' here is the event ID number - it has no inferred meaning so can be used to logically group your events
+                traceSource.TraceData(TraceEventType.Information, 1, "Logged!");
+    
+                //make sure the trace gets written
+                traceSource.Flush();
+                traceSource.Close();
+    
+                Console.Read();
+            }
         }
-
     }
-
-}
 
   
 
 To turn off logging you can just update the app.config file:
 
-  
 
-<source name="Log" switchValue="Off"
-switchType="System.Diagnostics.SourceSwitch">
-
-  <listeners>
-
-    <add name="myListener"/>
-
-    <remove name="Default"/>
-
-  </listeners>
-
-</source>
-
-  
 
 A trace source can can use more than one listener. The following configuration
 outputs all traces to the log file in the bin folder and adds critical events
@@ -309,6 +237,8 @@ base class.
 >author: simonjstanford@gmail.com  
 >source: desktop.win  
 >source-application: evernote.win32  
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMyMzM3NjY5XX0=
+eyJoaXN0b3J5IjpbMjUwNzA4NDQxXX0=
 -->
