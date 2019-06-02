@@ -18,9 +18,7 @@
 
 [Publisher Policy File](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/Publisher_Policy_File.xml)
   
-2a) Alternatively, you can use the codeBase element instead of a probing element to specify a location for the DLL. This is used when the DLL isn't in
-the application directory is not on the local computer. The remote DLL needs
-to be strongly named.
+2a) Alternatively, you can use the codeBase element instead of a probing element to specify a location for the DLL. This is used when the DLL isn't in the application directory is not on the local computer. The remote DLL needs to be strongly named.
 
     <?xml version="1.0" encoding="utf-8"?>
     <configuration>
@@ -44,14 +42,11 @@ to be strongly named.
       </runtime>
     </configuration>
 
-3) Run an Assembly Linker command to turn the Publisher Policy File into a
-DLL. Make sure that the output DLLs name is in the format **policy.**
-_majorNumber_ **.** _minorNumber_ **.** _mainAssemblyName_ **.dll**.
+3) Run an Assembly Linker command to turn the Publisher Policy File into a DLL. Make sure that the output DLLs name is in the format **policy._majorNumber_ . _minorNumber_ ._mainAssemblyName_ .dll**.
 
        al /link:"C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\PublisherPolicyFileExample\Publisher Policy File\Publisher Policy File.xml" /out:"C:\temp\PublisherPolicyAssembly.dll" /keyfile:"C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\StrongNamedAssemblyV2\StrongNamedAssemblyV2\myKey.snk" /platform:anycpu
 
-4) Install the new DLL into the GAC. **Note that the publisher policy XML file
-and publisher policy DLL need to be in the same directory.**
+4) Install the new DLL into the GAC. **Note that the publisher policy XML file and publisher policy DLL need to be in the same directory.**
 
        gacutil -i "C:\Users\simon\Dropbox\Coding\70-483\Strong
     Naming\PublisherPolicyFileExample\Publisher Policy
@@ -61,6 +56,6 @@ and publisher policy DLL need to be in the same directory.**
 
 [Publisher Policy File Example](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/PublisherPolicyFileExample.zip)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDQ5MDAxNDAsLTQyNDIwMjczNiwtNT
-g5NDU4NDc4XX0=
+eyJoaXN0b3J5IjpbLTQ2OTMxNDczNiwtNDI0MjAyNzM2LC01OD
+k0NTg0NzhdfQ==
 -->
