@@ -1,49 +1,58 @@
 # Read Attributes
 
+
+
+
   * Attributes, e.g. serialisation, are read during execution to determine an action.
   * There are two ways to read attributes: 
     * Attribute.GetCustomAttribute() or Attribute.GetCustomAttributes()
     * GetCustomAttributes() on a Type or MemberInfo object.
 
-class Program
+
+  
+
+
+    class Program
     {
-        static void Main(string[] args)
-        {
-            if (Attribute.IsDefined(typeof(Person), typeof(SerializableAttribute)))
-            {
-                Console.WriteLine("Serializable attribute is defined");
-            }
-
-            //read properties of an attribute
-            var attributes = typeof(ConditionalClass)
-                            .GetMethod("Test")
-                            .GetCustomAttributes().OfType<ConditionalAttribute>()
-                            .OrderBy(a => a.ConditionString);
-
-            foreach (var attribute in attributes)
-            {
-                Console.WriteLine(attribute.ConditionString);
-            }
-            Console.ReadKey();
-        }
+    	static void Main(string[] args)
+    	{
+    		if (Attribute.IsDefined(typeof(Person), typeof(SerializableAttribute)))
+    		{
+    			Console.WriteLine("Serializable attribute is defined");
+    		}
+    
+    		//read properties of an attribute
+    		var attributes = typeof(ConditionalClass)
+    						.GetMethod("Test")
+    						.GetCustomAttributes().OfType<ConditionalAttribute>()
+    						.OrderBy(a => a.ConditionString);
+    
+    		foreach (var attribute in attributes)
+    		{
+    			Console.WriteLine(attribute.ConditionString);
+    		}
+    		Console.ReadKey();
+    	}
     }
-
+    
     [Serializable]
     public class Person
     {
-
+    
     }
-
-
+    
+    
     public class ConditionalClass
     {
-        [Conditional("DEBUG")]
-        public void Test()
-        {
-
-        }
+    	[Conditional("DEBUG")]
+    	public void Test()
+    	{
+    
+    	}
     }
-  
+
+
+
 
 ![noteattachment1][e4b5c673138eb3dbd1cc4d0bbe8e764f]
 
@@ -80,5 +89,5 @@ constructor, it is just a public property.
 >author: simonjstanford@gmail.com  
 >source-url: https://msdn.microsoft.com/en-us/library/84c42s56.aspx  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyOTI1MDIwMF19
+eyJoaXN0b3J5IjpbODY1MDc0MDc4XX0=
 -->
