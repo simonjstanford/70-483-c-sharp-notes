@@ -55,71 +55,18 @@ to be strongly named.
 DLL. Make sure that the output DLLs name is in the format **policy.**
 _majorNumber_ **.** _minorNumber_ **.** _mainAssemblyName_ **.dll**.
 
-    al /link:"C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\PublisherPolicyFileExample\Publisher Policy File\Publisher Policy File.xml" /out:"C:\temp\PublisherPolicyAssembly.dll" /keyfile:"C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\StrongNamedAssemblyV2\StrongNamedAssemblyV2\myKey.snk" /platform:anycpu
-
-
+       al /link:"C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\PublisherPolicyFileExample\Publisher Policy File\Publisher Policy File.xml" /out:"C:\temp\PublisherPolicyAssembly.dll" /keyfile:"C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\StrongNamedAssemblyV2\StrongNamedAssemblyV2\myKey.snk" /platform:anycpu
 
 4) Install the new DLL into the GAC. **Note that the publisher policy XML file
 and publisher policy DLL need to be in the same directory.**
 
- **  
-**
-
-gacutil -i "C:\Users\simon\Dropbox\Coding\70-483\Strong
-Naming\PublisherPolicyFileExample\Publisher Policy
-File\policy.1.0.StrongNamedAssembly.dll"
-
- **  
-**
+       gacutil -i "C:\Users\simon\Dropbox\Coding\70-483\Strong
+    Naming\PublisherPolicyFileExample\Publisher Policy
+    File\policy.1.0.StrongNamedAssembly.dll"
 
 5) Now, applications that reference v1 of the assembly will use v2.
 
-  
-
- **![noteattachment4][b0d4deaa6eb2ccbab9956c6733a8b808]**
-
-  
-
-
----
-### ATTACHMENTS
-[5d818a5597a007ff091527b7bc98af34]: media/StrongNamedAssemblyV2.zip
-[StrongNamedAssemblyV2.zip](media/StrongNamedAssemblyV2.zip)
->hash: 5d818a5597a007ff091527b7bc98af34  
->source-url: file://C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\StrongNamedAssemblyV2.zip  
->file-name: StrongNamedAssemblyV2.zip  
->attachment: true  
-
-[dd3d89c875cbf461ccba373b1fe56034]: media/StrongNamedAssembly.zip
-[StrongNamedAssembly.zip](media/StrongNamedAssembly.zip)
->hash: dd3d89c875cbf461ccba373b1fe56034  
->source-url: file://C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\StrongNamedAssembly.zip  
->file-name: StrongNamedAssembly.zip  
->attachment: true  
-
-[7d646f78a4345467ae7d22e75cf07f33]: media/Publisher_Policy_File.xml
-[Publisher_Policy_File.xml](media/Publisher_Policy_File.xml)
->hash: 7d646f78a4345467ae7d22e75cf07f33  
->source-url: file://C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\PublisherPolicyFileExample\Publisher Policy File\Publisher Policy File.xml  
->file-name: Publisher Policy File.xml  
->attachment: true  
-
-[b0d4deaa6eb2ccbab9956c6733a8b808]: media/PublisherPolicyFileExample.zip
-[PublisherPolicyFileExample.zip](media/PublisherPolicyFileExample.zip)
->hash: b0d4deaa6eb2ccbab9956c6733a8b808  
->source-url: file://C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\PublisherPolicyFileExample.zip  
->file-name: PublisherPolicyFileExample.zip  
->attachment: true  
-
----
-### NOTE ATTRIBUTES
->Created Date: 2016-11-02 12:27:37  
->Last Evernote Update Date: 2016-11-08 19:10:31  
->author: simonjstanford@gmail.com  
->source-url: https://msdn.microsoft.com/en-us/library/dz32563a(v=vs.110).aspx  
-
-
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4ODY1MzA0NCwtNTg5NDU4NDc4XX0=
+eyJoaXN0b3J5IjpbMTE3ODA2NTQwMywtNTg5NDU4NDc4XX0=
 -->
