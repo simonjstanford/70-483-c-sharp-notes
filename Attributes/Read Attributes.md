@@ -5,46 +5,45 @@
     * Attribute.GetCustomAttribute() or Attribute.GetCustomAttributes()
     * GetCustomAttributes() on a Type or MemberInfo object.
 
- 
+class Program
+    {
+        static void Main(string[] args)
+        {
+            if (Attribute.IsDefined(typeof(Person), typeof(SerializableAttribute)))
+            {
+                Console.WriteLine("Serializable attribute is defined");
+            }
 
-     class Program
-        {
-            static void Main(string[] args)
+            //read properties of an attribute
+            var attributes = typeof(ConditionalClass)
+                            .GetMethod("Test")
+                            .GetCustomAttributes().OfType<ConditionalAttribute>()
+                            .OrderBy(a => a.ConditionString);
+
+            foreach (var attribute in attributes)
             {
-                if (Attribute.IsDefined(typeof(Person), typeof(SerializableAttribute)))
-                {
-                    Console.WriteLine("Serializable attribute is defined");
-                }
-    
-                //read properties of an attribute
-                var attributes = typeof(ConditionalClass)
-                                .GetMethod("Test")
-                                .GetCustomAttributes().OfType<ConditionalAttribute>()
-                                .OrderBy(a => a.ConditionString);
-    
-                foreach (var attribute in attributes)
-                {
-                    Console.WriteLine(attribute.ConditionString);
-                }
-                Console.ReadKey();
+                Console.WriteLine(attribute.ConditionString);
             }
+            Console.ReadKey();
         }
-    
-        [Serializable]
-        public class Person
+    }
+
+    [Serializable]
+    public class Person
+    {
+
+    }
+
+
+    public class ConditionalClass
+    {
+        [Conditional("DEBUG")]
+        public void Test()
         {
-    
+
         }
-    
-    
-        public class ConditionalClass
-        {
-            [Conditional("DEBUG")]
-            public void Test()
-            {
-    
-            }
-        }
+    }
+  
 
 ![noteattachment1][e4b5c673138eb3dbd1cc4d0bbe8e764f]
 
@@ -81,5 +80,5 @@ constructor, it is just a public property.
 >author: simonjstanford@gmail.com  
 >source-url: https://msdn.microsoft.com/en-us/library/84c42s56.aspx  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODgyNjc5NTRdfQ==
+eyJoaXN0b3J5IjpbMjAyOTI1MDIwMF19
 -->
