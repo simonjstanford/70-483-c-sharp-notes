@@ -8,61 +8,36 @@
 
   
 
-The following will only execute if the application is in debug mode. This
-means that you can indicate a bug in an application during development:
+The following will only execute if the application is in debug mode. This means that you can indicate a bug in an application during development:  
 
-  
+    Debug.WriteLine("Starting application");
+    Debug.Indent();
+    int i = 1 + 2;
+    Debug.Assert(i == 1); //displays an error message asking you to retry/abort/ignore
+    Debug.WriteLineIf(i > 0, "i is greater than 0");
 
-Debug.WriteLine("Starting application");
 
-Debug.Indent();
-
-int i = 1 + 2;
-
-Debug.Assert(i == 1); //displays an error message asking you to
-retry/abort/ignore
-
-Debug.WriteLineIf(i > 0, "i is greater than 0");
-
-  
-
-Both the Debug and Trace classes have a Listeners collection that holds
-references to listener objects. Initially, they hold a reference to a
-DefaultTraceListener object, but you can add other classes:
+Both the Debug and Trace classes have a Listeners collection that holds references to listener objects. Initially, they hold a reference to a DefaultTraceListener object, but you can add other classes:
 
   * ConsoleTraceListener
   * EventLogTraceListener
   * TextWriterTraceListener - sends output to a stream
+---
 
   
-
-Stream traceStream = File.Create("TraceFile.txt");
-
-  
-
-TextWriterTraceListener traceListener = new
-TextWriterTraceListener(traceStream);
-
-  
-
-Debug.Listeners.Add(traceListener);
-
-Trace.Listeners.Add(traceListener);
-
-  
-
-Debug.WriteLine("Trace started: " \+ DateTime.Now);
-
-  
-
-Debug.Flush();
-
-  
-
 <https://msdn.microsoft.com/en-us/library/ttcc4x86.aspx>
 
   
+Stream traceStream = File.Create("TraceFile.txt");
 
+TextWriterTraceListener traceListener = new TextWriterTraceListener(traceStream);
+
+Debug.Listeners.Add(traceListener);
+Trace.Listeners.Add(traceListener);
+
+Debug.WriteLine("Trace started: " + DateTime.Now);
+
+Debug.Flush();
 
 ---
 ### NOTE ATTRIBUTES
@@ -72,5 +47,5 @@ Debug.Flush();
 >source: desktop.win  
 >source-application: evernote.win32  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MzUxNTcwMV19
+eyJoaXN0b3J5IjpbMTA4NTEzNzM0NF19
 -->
