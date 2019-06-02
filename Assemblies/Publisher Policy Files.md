@@ -4,33 +4,15 @@
   * Uses XML to set a binding redirect to the new DLL.
   * The publish policy file is deployed to the GAC.
 
-  
-
-  
-
  **Creating a Publisher Policy  **
-
-  
 
 1) Create two strongly named assemblies with the same assembly name. One must
 be a different version than the other. I put them both in the GAC.
 
-  
 
-![noteattachment1][dd3d89c875cbf461ccba373b1fe56034]
-![noteattachment2][5d818a5597a007ff091527b7bc98af34]
+    gacutil -i "C:\Users\simon\Dropbox\Coding\70-483\StrongNaming\StrongNamedAssembly\StrongNamedAssembly\bin\Debug\StrongNamedAssembly.dll"
+    gacutil -i "C:\Users\simon\Dropbox\Coding\70-483\StrongNaming\StrongNamedAssemblyV2\StrongNamedAssemblyV2\bin\Debug\StrongNamedAssembly.dll"
 
-  
-
-gacutil -i "C:\Users\simon\Dropbox\Coding\70-483\Strong
-Naming\StrongNamedAssembly\StrongNamedAssembly\bin\Debug\StrongNamedAssembly.dll"
-
-gacutil -i "C:\Users\simon\Dropbox\Coding\70-483\Strong
-Naming\StrongNamedAssemblyV2\StrongNamedAssemblyV2\bin\Debug\StrongNamedAssembly.dll"
-
-  
-
-  
 
 2) Create a publisher policy file redirecting one assembly to the other. Note
 that the <probing/> element is used to define the place where the new DLL is
@@ -168,6 +150,7 @@ File\policy.1.0.StrongNamedAssembly.dll"
 >Last Evernote Update Date: 2016-11-08 19:10:31  
 >author: simonjstanford@gmail.com  
 >source-url: https://msdn.microsoft.com/en-us/library/dz32563a(v=vs.110).aspx  
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4OTQ1ODQ3OF19
+eyJoaXN0b3J5IjpbLTE5NzIzMjIyOTIsLTU4OTQ1ODQ3OF19
 -->
