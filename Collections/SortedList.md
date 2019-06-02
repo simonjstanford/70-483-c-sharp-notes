@@ -4,16 +4,7 @@
   * Objects are sorted using IComparable or IComparer when the SortedList is created.
   * All objects added to the SortedList must be comparable.
 
-  
 
-
----
-### NOTE ATTRIBUTES
->Created Date: 2017-01-03 19:42:10  
->Last Evernote Update Date: 2017-01-03 19:44:59  
->author: simonjstanford@gmail.com  
->source: desktop.win  
->source-application: evernote.win32  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMTE2NTk1N119
+eyJoaXN0b3J5IjpbLTE4NDI3MDIyMDFdfQ==
 -->
