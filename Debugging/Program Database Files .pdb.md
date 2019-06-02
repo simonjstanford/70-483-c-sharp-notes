@@ -17,8 +17,9 @@
 
  ---
 
-
+    cd "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64"
+    pdbcopy "C:\Users\simon\70-483\Strong Naming\StrongNamedAssemblyV3\StrongNamedAssemblyV3\bin\Debug\StrongNamedAssembly.pdb" "C:\Users\simon\70-483\Strong Naming\StrongNamedAssemblyV3\StrongNamedAssemblyV3\bin\Debug\PublicStrongNamedAssembly.pdb" -p
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzU1MTcxNzRdfQ==
+eyJoaXN0b3J5IjpbMjA0MTA4MDU5NF19
 -->
