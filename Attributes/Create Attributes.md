@@ -41,29 +41,7 @@ Has several properties:
     	}
     }
 
----
-
-  
-
-![noteattachment1][e4b5c673138eb3dbd1cc4d0bbe8e764f]
-
-  
-
-
----
-### ATTACHMENTS
-[e4b5c673138eb3dbd1cc4d0bbe8e764f]: media/AttributesExample-2.zip
-[AttributesExample-2.zip](media/AttributesExample-2.zip)
->hash: e4b5c673138eb3dbd1cc4d0bbe8e764f  
->source-url: file://C:\Users\Simon\Desktop\AttributesExample.zip  
->file-name: AttributesExample.zip  
->attachment: true  
-
----
-### NOTE ATTRIBUTES
->Created Date: 2016-10-03 21:09:49  
->Last Evernote Update Date: 2017-01-10 20:06:18  
->author: simonjstanford@gmail.com  
+[AttributesExample.zip](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/AttributesExample.zip)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MDgxNDg4Ml19
+eyJoaXN0b3J5IjpbLTE1OTcxMzM1ODRdfQ==
 -->
