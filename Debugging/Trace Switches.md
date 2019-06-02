@@ -21,7 +21,7 @@ A BooleanSwitch is created in the app.config like this:
 
 And then you can retrieve it in code and use it like this:
 
-      private static BooleanSwitch boolSwitch = new BooleanSwitch("mySwitch", "Switch in config file");
+    private static BooleanSwitch boolSwitch = new BooleanSwitch("mySwitch", "Switch in config file");
     
     public static void Main( )
     {
@@ -37,21 +37,19 @@ And then you can retrieve it in code and use it like this:
 
  **TraceSwitch**
 
-Used to set the level of tracing. You can define custom trace messages for
-different levels.
+Used to set the level of tracing. You can define custom trace messages for different levels.
+ 
+The level of information can be set using the TraceLevel enumeration which is used in the TraceSwitch.Level property. This property is readonly - it is set in config or instantiation. Default level is TraceLevel.Off. From .NET 2.0 you are able to use the text value for the value - Off, Error, Warning, etc.
 
+| **Enumerated value** | Integer value |  |
+|--|--|  |
+|  |  |  |
   
 
-The level of information can be set using the TraceLevel enumeration which is
-used in the TraceSwitch.Level property. This property is readonly - it is set
-in config or instantiation. Default level is TraceLevel.Off. From .NET 2.0 you
-are able to use the text value for the value - Off, Error, Warning, etc.
 
-  
+ 
 
- **Enumerated value**
-
-|  Integer value| Type of message displayed (or written to a specified output
+ Type of message displayed (or written to a specified output
 target)  
 ---|---|---  
 Off| 0| None  
@@ -124,5 +122,5 @@ public static void Main( )
 >source-url: https://msdn.microsoft.com/en-us/library/3at424ac.aspx  
 >source-application: evernote.win32  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1ODc5NzY3Ml19
+eyJoaXN0b3J5IjpbMTEwODE0NDQzNF19
 -->
