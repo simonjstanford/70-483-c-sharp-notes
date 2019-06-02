@@ -24,28 +24,18 @@ Both the Debug and Trace classes have a Listeners collection that holds referenc
   * TextWriterTraceListener - sends output to a stream
 ---
 
-  
+    Stream traceStream = File.Create("TraceFile.txt");
+    
+    TextWriterTraceListener traceListener = new TextWriterTraceListener(traceStream);
+    
+    Debug.Listeners.Add(traceListener);
+    Trace.Listeners.Add(traceListener);
+    
+    Debug.WriteLine("Trace started: " + DateTime.Now);
+    
+    Debug.Flush();
+
 <https://msdn.microsoft.com/en-us/library/ttcc4x86.aspx>
-
-  
-Stream traceStream = File.Create("TraceFile.txt");
-
-TextWriterTraceListener traceListener = new TextWriterTraceListener(traceStream);
-
-Debug.Listeners.Add(traceListener);
-Trace.Listeners.Add(traceListener);
-
-Debug.WriteLine("Trace started: " + DateTime.Now);
-
-Debug.Flush();
-
----
-### NOTE ATTRIBUTES
->Created Date: 2016-11-12 12:02:56  
->Last Evernote Update Date: 2017-02-13 22:03:01  
->author: simonjstanford@gmail.com  
->source: desktop.win  
->source-application: evernote.win32  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NTEzNzM0NF19
+eyJoaXN0b3J5IjpbMTE4MTY5NDM5XX0=
 -->
