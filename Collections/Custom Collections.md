@@ -1,18 +1,12 @@
 # Custom Collections
 
-You can create custom collections by inheriting from CollectionBase (non-
-generic) or Collection<T>.
-
-  
+You can create custom collections by inheriting from CollectionBase (non-generic) or Collection<T>.
 
  **Collection <T>**
-
-Inherit from this base class to have a fully functioning list. To then extend
-the code when inserting, removing & setting items or clearing the list, you
-just need to override the base virtual method:
+ 
+Inherit from this base class to have a fully functioning list. To then extend the code when inserting, removing & setting items or clearing the list, you just need to override the base virtual method:
 
   
-
 public class Animal  
 {  
   public string Name;  
@@ -99,5 +93,5 @@ Also see
 >source-url: file:///C:/Users/simon/AppData/Local/Temp/Temp1_code.zip/ch07.html  
 >source-application: evernote.win32  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNzI3OTcyNl19
+eyJoaXN0b3J5IjpbOTMwNzUxOTU4XX0=
 -->
