@@ -4,7 +4,7 @@
   * Uses XML to set a binding redirect to the new DLL.
   * The publish policy file is deployed to the GAC.
 
- **Creating a Publisher Policy  **
+ **Creating a Publisher Policy**
 
 1) Create two strongly named assemblies with the same assembly name. One must
 be a different version than the other. I put them both in the GAC.
@@ -66,7 +66,7 @@ and publisher policy DLL need to be in the same directory.**
 
 5) Now, applications that reference v1 of the assembly will use v2.
 
-
+[Publisher Policy File Example](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/PublisherPolicyFileExample.zip)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3ODA2NTQwMywtNTg5NDU4NDc4XX0=
+eyJoaXN0b3J5IjpbLTQyNDIwMjczNiwtNTg5NDU4NDc4XX0=
 -->
