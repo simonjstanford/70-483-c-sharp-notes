@@ -15,26 +15,10 @@
     * A public PDB file only contains items that are available from one source file to another. Therefore, local variables etc. are not in the public symbol.
   * Use PDBCopy.exe (part of the Windows Software Development Kit) to remove symbol data:
 
-  
-
-cd "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64"
-
-pdbcopy "C:\Users\simon\Dropbox\Coding\70-483\Strong
-Naming\StrongNamedAssemblyV3\StrongNamedAssemblyV3\bin\Debug\StrongNamedAssembly.pdb"
-"C:\Users\simon\Dropbox\Coding\70-483\Strong
-Naming\StrongNamedAssemblyV3\StrongNamedAssemblyV3\bin\Debug\PublicStrongNamedAssembly.pdb"
--p
-
-  
+ ---
 
 
----
-### NOTE ATTRIBUTES
->Created Date: 2016-11-09 20:26:52  
->Last Evernote Update Date: 2016-11-09 21:08:18  
->author: simonjstanford@gmail.com  
->source: desktop.win  
->source-application: evernote.win32  
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyMjYwMjczMV19
+eyJoaXN0b3J5IjpbLTIwMzU1MTcxNzRdfQ==
 -->
