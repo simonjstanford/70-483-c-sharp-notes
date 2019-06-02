@@ -24,69 +24,38 @@ the application, but I found that an absolute path worked.
 
 [Publisher Policy File](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/Publisher_Policy_File.xml)
   
-
 2a) Alternatively, you can use the codeBase element instead of a probing
 element to specify a location for the DLL. This is used when the DLL isn't in
 the application directory is not on the local computer. The remote DLL needs
 to be strongly named.
 
-  
-
-<?xml version="1.0" encoding="utf-8"?>
-
-<configuration>
-
-  <runtime>
-
-    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
-
-  
-
-      <codeBase version="3.0.0.0" href= "\\\simon-server\Backup\StrongNamedAssembly.dll"/>
-
-  
-
-      <dependentAssembly>
-
-  
-
-        <assemblyIdentity name="StrongNamedAssembly"
-
-                          publicKeyToken="9b72c515e5bd9e33"
-
-                          culture="neutral" />
-
-  
-
-        <!-- Redirecting to version 3.0.0.0 of the assembly. -->
-
-        <bindingRedirect oldVersion="1.0.0.0"
-
-                         newVersion="3.0.0.0"/>
-
-  
-
-      </dependentAssembly>
-
-    </assemblyBinding>
-
-  </runtime>
-
-</configuration>
-
-  
+    <?xml version="1.0" encoding="utf-8"?>
+    <configuration>
+      <runtime>
+        <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+    
+          <codeBase version="3.0.0.0" href= "\\simon-server\Backup\StrongNamedAssembly.dll"/>
+    
+          <dependentAssembly>
+    
+            <assemblyIdentity name="StrongNamedAssembly"
+                              publicKeyToken="9b72c515e5bd9e33"
+                              culture="neutral" />
+    
+            <!-- Redirecting to version 3.0.0.0 of the assembly. -->
+            <bindingRedirect oldVersion="1.0.0.0"
+                             newVersion="3.0.0.0"/>
+    
+          </dependentAssembly>
+        </assemblyBinding>
+      </runtime>
+    </configuration>
 
 3) Run an Assembly Linker command to turn the Publisher Policy File into a
 DLL. Make sure that the output DLLs name is in the format **policy.**
 _majorNumber_ **.** _minorNumber_ **.** _mainAssemblyName_ **.dll**.
 
-  
-
-al /link:"C:\Users\simon\Dropbox\Coding\70-483\Strong
-Naming\PublisherPolicyFileExample\Publisher Policy File\Publisher Policy
-File.xml" /out:"C:\temp\PublisherPolicyAssembly.dll"
-/keyfile:"C:\Users\simon\Dropbox\Coding\70-483\Strong
-Naming\StrongNamedAssemblyV2\StrongNamedAssemblyV2\myKey.snk" /platform:anycpu  
+    al /link:"C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\PublisherPolicyFileExample\Publisher Policy File\Publisher Policy File.xml" /out:"C:\temp\PublisherPolicyAssembly.dll" /keyfile:"C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\StrongNamedAssemblyV2\StrongNamedAssemblyV2\myKey.snk" /platform:anycpu
 
 
 
@@ -149,6 +118,8 @@ File\policy.1.0.StrongNamedAssembly.dll"
 >author: simonjstanford@gmail.com  
 >source-url: https://msdn.microsoft.com/en-us/library/dz32563a(v=vs.110).aspx  
 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTI4NzczODQsLTU4OTQ1ODQ3OF19
+eyJoaXN0b3J5IjpbLTI4ODY1MzA0NCwtNTg5NDU4NDc4XX0=
 -->
