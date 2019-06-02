@@ -11,12 +11,12 @@
     * An AssemblyFileVersionAttribute. Incremented on each build. This shouldn't be done on each developer build - it should be integrated into the build process on the build server.
     * AssemblyVersionAttribute. Incremented manually. DOne when you want to deploy a specific version.
 
-
 E.g:
 
     [assembly: AssemblyVersion("1.0.0.0")]
     [assembly: AssemblyFileVersion("1.0.0.0")]
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NTI4NjU5NiwtMjcwODMyMzA5XX0=
+eyJoaXN0b3J5IjpbLTIwMjI3MTcxNjIsMjA4NTI4NjU5NiwtMj
+cwODMyMzA5XX0=
 -->
