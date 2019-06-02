@@ -32,8 +32,7 @@ And to read the event log:
 
   
 
-Or you could subscribe to an event that fires when a new entry is put in the
-log:
+Or you could subscribe to an event that fires when a new entry is put in the log:
 
     static void Main(string[] args)
     {
@@ -69,5 +68,5 @@ log:
 <https://msdn.microsoft.com/en-us/library/2awhba7a.aspx>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MzQxNjYzOCwtNzUwODMwODA0XX0=
+eyJoaXN0b3J5IjpbMTc0NjUzMzMwMCwtNzUwODMwODA0XX0=
 -->
