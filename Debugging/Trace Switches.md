@@ -1,62 +1,39 @@
 # Trace Switches
 
-Trace switches are used to control what type of information is outputted when
-debugging an live application.
+Trace switches are used to control what type of information is outputted when debugging an live application.
+
+There are two predefined classes that are used to create switches that are in the System.Diagnostics namespace.
 
   
-
-There are two predefined classes that are used to create switches that are in
-the System.Diagnostics namespace.
-
-  
-
  **BooleanSwitch**
 
-Used to turn tracing on or off. Set the switch value to 0 for off and any non-
-zero value for on. From .NET 2.0 you are able to use text for the value -
-true/false
+Used to turn tracing on or off. Set the switch value to 0 for off and any non-zero value for on. From .NET 2.0 you are able to use text for the value - true/false  
 
-  
+A BooleanSwitch is created in the app.config like this:  
 
-A BooleanSwitch is created in the app.config like this:
-
-  
-
-<configuration>  
-  <system.diagnostics>  
-    <switches>  
-      <add name="mySwitch" value="1"/>  
-    </switches>  
-  </system.diagnostics>
-
-</configuration>
-
-  
+    <configuration>  
+      <system.diagnostics>  
+        <switches>  
+          <add name="mySwitch" value="1"/>  
+        </switches>  
+      </system.diagnostics>
+    </configuration>
 
 And then you can retrieve it in code and use it like this:
 
-  
-
-private static BooleanSwitch boolSwitch = new BooleanSwitch("mySwitch",
-"Switch in config file");
-
-  
-public static void Main( )  
-{  
-    //...
-
-    Console.WriteLine("Boolean switch {0} configured as {1}", boolSwitch.DisplayName, boolSwitch.Enabled.ToString());
-
-    if (boolSwitch.Enabled)  
-    {  
-        //...  
+      private static BooleanSwitch boolSwitch = new BooleanSwitch("mySwitch", "Switch in config file");
+    
+    public static void Main( )
+    {
+        //...
+        Console.WriteLine("Boolean switch {0} configured as {1}", boolSwitch.DisplayName, boolSwitch.Enabled.ToString());
+    
+        if (boolSwitch.Enabled)
+        {
+            //...
+       
+        }
     }
-
-}
-
-  
-
-  
 
  **TraceSwitch**
 
@@ -147,5 +124,5 @@ public static void Main( )
 >source-url: https://msdn.microsoft.com/en-us/library/3at424ac.aspx  
 >source-application: evernote.win32  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMTQwOTM5Ml19
+eyJoaXN0b3J5IjpbMTE1ODc5NzY3Ml19
 -->
