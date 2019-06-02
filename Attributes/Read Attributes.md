@@ -3,15 +3,7 @@
 
 
 
-  * Attributes, e.g. serialisation, are read during execution to determine an action.
-  * There are two ways to read attributes: 
-    * Attribute.GetCustomAttribute() or Attribute.GetCustomAttributes()
-    * GetCustomAttributes() on a Type or MemberInfo object.
-
-
-  
-
-
+---
     class Program
     {
     	static void Main(string[] args)
@@ -34,14 +26,13 @@
     		Console.ReadKey();
     	}
     }
-    
+
     [Serializable]
     public class Person
     {
     
     }
-    
-    
+
     public class ConditionalClass
     {
     	[Conditional("DEBUG")]
@@ -53,6 +44,12 @@
 
 
 
+
+
+
+
+  
+  
 
 ![noteattachment1][e4b5c673138eb3dbd1cc4d0bbe8e764f]
 
@@ -88,6 +85,7 @@ constructor, it is just a public property.
 >Last Evernote Update Date: 2017-01-30 20:06:24  
 >author: simonjstanford@gmail.com  
 >source-url: https://msdn.microsoft.com/en-us/library/84c42s56.aspx  
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY1MDc0MDc4XX0=
+eyJoaXN0b3J5IjpbMjEzMTk0ODEwNF19
 -->
