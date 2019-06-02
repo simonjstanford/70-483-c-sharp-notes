@@ -46,8 +46,7 @@
 
 [AttributesExample.zip](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/AttributesExample.zip)
   
-In the example below, the public property 'Reviewed' in DeveloperAttribute is assigned a value when using the attribute. It is not in the attribute's
-constructor, it is just a public property.
+In the example below, the public property 'Reviewed' in DeveloperAttribute is assigned a value when using the attribute. It is not in the attribute's constructor, it is just a public property.
 
     [Developer("Joan Smith", "1", Reviewed = true)]
 
@@ -56,5 +55,5 @@ constructor, it is just a public property.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk2NjU3MzcwXX0=
+eyJoaXN0b3J5IjpbLTE0MDg4NTI4NDhdfQ==
 -->
