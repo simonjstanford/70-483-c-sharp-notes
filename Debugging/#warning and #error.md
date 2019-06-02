@@ -2,44 +2,20 @@
 
 #warning and #error can be used to report a warning/error to the compiler.
 
-  
-
-using System;
-
-  
-
-namespace CompilerDirectiveExample
-
-{
-
-    class Program
-
+    using System;
+    
+    namespace CompilerDirectiveExample
     {
-
-        static void Main(string[] args)
-
+        class Program
         {
-
-            #warning Bollocks
-
-            #error Random Error
-
+            static void Main(string[] args)
+            {
+                #warning Bollocks
+                #error Random Error
+            }
         }
-
     }
 
-}
-
-  
-
-
----
-### NOTE ATTRIBUTES
->Created Date: 2016-11-09 20:10:36  
->Last Evernote Update Date: 2016-11-09 20:10:38  
->author: simonjstanford@gmail.com  
->source: desktop.win  
->source-application: evernote.win32  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyODczNDIyM119
+eyJoaXN0b3J5IjpbMTMyOTcwNzAyMl19
 -->
