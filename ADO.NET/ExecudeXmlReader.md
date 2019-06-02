@@ -15,9 +15,7 @@ This returns an XMLReader, which represents data returned from a database SELECT
     cmd.CommandText = "SELECT * FROM Person FOR XML AUTO, XMLDATA";
     System.Xml.XmlReader xml = cmd.ExecuteXmlReader();
     
-    cn.Close();
-
-  
+    cn.Close();  
 
 Output:
  
@@ -46,6 +44,6 @@ Output:
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMDQyOTM5MiwtMTA5ODk3NTE1OCwtMT
+eyJoaXN0b3J5IjpbLTg1MjkwNTM4OCwtMTA5ODk3NTE1OCwtMT
 E5NDgyMTEwMV19
 -->
