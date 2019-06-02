@@ -123,9 +123,17 @@ There are several options in the TraceEventType enum:
 There are other TraceListeners that can be used, but you can also define your own trace listeners by inheriting from the TraceListener base class and specifying your own implementation for the trace methods.
 
 
-
-
+| Name                       | Output                                     |
+|----------------------------|--------------------------------------------|
+| ConsoleTraceListener       | Standard output or error stream            |
+| DelimitedListTraceListener | TextWriter                                 |
+| EventLogTraceListener      | EventLog                                   |
+| EventSchemaTraceListener   | XML-encoded, schema compliant log file     |
+| TextWriterTraceListener    | TextWriter                                 |
+| XmlWriterTraceListener     | Xml-encoded data to a TextWriter or stream |
+|----------------------------|--------------------------------------------|
   
+
 
 You can also create your own TraceListener by deriving from the TraceListener base class.
 
@@ -151,5 +159,5 @@ You can also create your own TraceListener by deriving from the TraceListener ba
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY0MzY0NDAyXX0=
+eyJoaXN0b3J5IjpbLTQ0NzM3OTc4M119
 -->
