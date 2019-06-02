@@ -2,8 +2,8 @@
 
 You can create custom collections by inheriting from CollectionBase (non-generic) or Collection<T>.
 
- **Collection <T>**
- 
+## Collection <T>
+
 Inherit from this base class to have a fully functioning list. To then extend the code when inserting, removing & setting items or clearing the list, you just need to override the base virtual method:
 
   
@@ -54,7 +54,8 @@ Inherit from this base class to have a fully functioning list. To then extend th
     }  
 
   
- **CollectionBase**
+
+## CollectionBase
 
 There is no Add or Remove methods in CollectionBase - these are added as you
 see fit.
@@ -64,5 +65,5 @@ Also see Indexers
 ![Table 9-7](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/Table9-7.png)
 ![Table 9-8](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/Table9-8.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3OTI3MDY5OCwzOTExNjE3MzhdfQ==
+eyJoaXN0b3J5IjpbMTkwOTQ0OTA1NiwzOTExNjE3MzhdfQ==
 -->
