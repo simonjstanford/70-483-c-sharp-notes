@@ -18,17 +18,10 @@ You can access the performance monitor programmatically:
   
 
 All performance monitors have a unique name within a category.
-
-  
-
 To access the performance monitors one of the following must be true:
 
   * The application needs to run under full trust  
   * The account that is running the application must be an administrator or part of the Performance Monitor Users group.
-
-  
-
-  
 
 ## Performance Counters
 
@@ -92,5 +85,5 @@ How to programmatically use Windows Perfmon:
     }
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg0MDEwMjAxXX0=
+eyJoaXN0b3J5IjpbOTg5MjI0NjY3XX0=
 -->
