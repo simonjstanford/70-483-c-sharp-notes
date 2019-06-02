@@ -9,10 +9,11 @@
 1) Create two strongly named assemblies with the same assembly name. One must
 be a different version than the other. I put them both in the GAC.
 
+[StrongNamedAssembly](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/StrongNamedAssembly.zip)
+[StrongNamedAssemblyV2](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/StrongNamedAssemblyV2.zip)
 
     gacutil -i "C:\Users\simon\Dropbox\Coding\70-483\StrongNaming\StrongNamedAssembly\StrongNamedAssembly\bin\Debug\StrongNamedAssembly.dll"
     gacutil -i "C:\Users\simon\Dropbox\Coding\70-483\StrongNaming\StrongNamedAssemblyV2\StrongNamedAssemblyV2\bin\Debug\StrongNamedAssembly.dll"
-
 
 2) Create a publisher policy file redirecting one assembly to the other. Note
 that the <probing/> element is used to define the place where the new DLL is
@@ -21,10 +22,7 @@ DLL and throws an TypeLoadException if it can't find it. The documentation
 says that the probing element can only be used when the path is relative to
 the application, but I found that an absolute path worked.
 
-  
-
-![noteattachment3][7d646f78a4345467ae7d22e75cf07f33]
-
+[Publisher Policy File](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/Publisher_Policy_File.xml)
   
 
 2a) Alternatively, you can use the codeBase element instead of a probing
@@ -152,5 +150,5 @@ File\policy.1.0.StrongNamedAssembly.dll"
 >source-url: https://msdn.microsoft.com/en-us/library/dz32563a(v=vs.110).aspx  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzIzMjIyOTIsLTU4OTQ1ODQ3OF19
+eyJoaXN0b3J5IjpbLTExMTI4NzczODQsLTU4OTQ1ODQ3OF19
 -->
