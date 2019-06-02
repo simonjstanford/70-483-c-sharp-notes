@@ -51,66 +51,35 @@ The level of information can be set using the TraceLevel enumeration which is us
 | Verbose          | 4             | Verbose messages, informational messages, warning messages, and error messages |
   
 
-  
 
 A TraceSwitch is created in the app.config like this:
-
-  
-
-<configuration>  
-  <system.diagnostics>  
-    <switches>  
-      <add name="mySwitch" value="1"/>  
-    </switches>  
-  </system.diagnostics>
-
-</configuration>
-
-  
-
+      
+    <configuration>  
+       <system.diagnostics>
+        <switches>
+          <add name="mySwitch" value="1"/>
+        </switches>
+      </system.diagnostics>
+    </configuration>
+      
 And then you can retrieve it in code and use it like this:
 
-  
-
-private static TraceSwitch traceSwitch = new TraceSwitch("mySwitch", "Switch
-in config file");
-
-  
-public static void Main( )  
-{  
-    //...
-
-    Console.WriteLine("Trace switch {0} configured as {1}", traceSwitch.DisplayName, traceSwitch.Level.ToString());
-
+    private static TraceSwitch traceSwitch = new TraceSwitch("mySwitch", "Switch in config file");
     
-
-    switch (traceSwitch.Level)
-
+    public static void Main( )
     {
-
-         case TraceLevel.Error:
-
-         ... 
-
+        //...
+        Console.WriteLine("Trace switch {0} configured as {1}", traceSwitch.DisplayName, traceSwitch.Level.ToString());
+        
+        switch (traceSwitch.Level)
+        {
+             case TraceLevel.Error:
+             ... 
+        }
     }
-
-}
-
-  
+      
 
 <https://msdn.microsoft.com/en-us/library/3at424ac(v=vs.110).aspx>
-
-  
-
-
----
-### NOTE ATTRIBUTES
->Created Date: 2017-02-01 19:23:41  
->Last Evernote Update Date: 2017-02-01 19:51:21  
->author: simonjstanford@gmail.com  
->source: desktop.win  
->source-url: https://msdn.microsoft.com/en-us/library/3at424ac.aspx  
->source-application: evernote.win32  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNDY5Mjk2Nl19
+eyJoaXN0b3J5IjpbMTU4NTg0NjE3N119
 -->
