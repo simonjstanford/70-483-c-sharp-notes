@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+	
+      <probing privatePath="C:\Users\simon\Dropbox\Coding\70-483\Strong Naming\StrongNamedAssemblyV2\StrongNamedAssemblyV2\bin\Debug"/>
+	
+      <dependentAssembly>
+        
+        <assemblyIdentity name="StrongNamedAssembly" 
+                          publicKeyToken="9b72c515e5bd9e33"
+                          culture="neutral" />
+        
+        <!-- Redirecting to version 2.0.0.0 of the assembly. -->
+        <bindingRedirect oldVersion="1.0.0.0" 
+                         newVersion="2.0.0.0"/>
+      
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>
