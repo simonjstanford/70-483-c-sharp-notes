@@ -2,30 +2,18 @@
 
 You can access the performance monitor programmatically:
 
-  
 
-using (PerformanceCounter pc = new PerformanceCounter("Memory", "Available
-Bytes"))
-
-{
-
-    string text = "Available memory: ";
-
-    Console.Write(text);
-
-  
-
-    while (true)
-
+    using (PerformanceCounter pc = new PerformanceCounter("Memory", "Available Bytes"))
     {
-
-        Console.Write(pc.RawValue);
-
-        Console.SetCursorPosition(text.Length, Console.CursorTop);
-
+        string text = "Available memory: ";
+        Console.Write(text);
+    
+        while (true)
+        {
+            Console.Write(pc.RawValue);
+            Console.SetCursorPosition(text.Length, Console.CursorTop);
+        }
     }
-
-}
 
   
 
@@ -42,7 +30,7 @@ To access the performance monitors one of the following must be true:
 
   
 
- **Performance Counters**
+## ****Performance Counters****
 
 Performance counters come in different types, but they all implement
 IDisposable because they access unmanaged resources. Some types are:
@@ -176,6 +164,7 @@ private static bool CreatePerformanceCounters()
 >source-url: &  
 >source-url: ie=UTF-8#q=AvergateTimer32  
 >source-application: evernote.win32  
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU1Mjc0MTQzXX0=
+eyJoaXN0b3J5IjpbNDgzMTk1NTU1XX0=
 -->
