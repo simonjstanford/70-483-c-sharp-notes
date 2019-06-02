@@ -1,11 +1,7 @@
 # ExecudeXmlReader
 
-This returns an XMLReader, which represents data returned from a database
-SELECT statement in XML. Notice the inclusion of 'FOR XML AUTO, XMLDATA' in
-the SQL statement. Note that the XML schema is also returned.
-
-      
-    
+This returns an XMLReader, which represents data returned from a database SELECT statement in XML. Notice the inclusion of 'FOR XML AUTO, XMLDATA' in the SQL statement. Note that the XML schema is also returned.
+         
     SqlConnection cn = new SqlConnection();
     //cn.ConnectionString = "Server=myServerAddress;Database=myDataBase;User
     Id=myUsername;Password=myPassword;";
@@ -50,6 +46,6 @@ Output:
     
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTg5NzUxNTgsLTExOTQ4MjExMDFdfQ
-==
+eyJoaXN0b3J5IjpbLTkyMDQyOTM5MiwtMTA5ODk3NTE1OCwtMT
+E5NDgyMTEwMV19
 -->
