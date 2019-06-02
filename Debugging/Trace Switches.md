@@ -5,7 +5,8 @@ Trace switches are used to control what type of information is outputted when de
 There are two predefined classes that are used to create switches that are in the System.Diagnostics namespace.
 
   
- **BooleanSwitch**
+
+## BooleanSwitch
 
 Used to turn tracing on or off. Set the switch value to 0 for off and any non-zero value for on. From .NET 2.0 you are able to use text for the value - true/false  
 
@@ -35,7 +36,7 @@ And then you can retrieve it in code and use it like this:
         }
     }
 
- **TraceSwitch**
+## TraceSwitch
 
 Used to set the level of tracing. You can define custom trace messages for different levels.
  
@@ -81,5 +82,5 @@ And then you can retrieve it in code and use it like this:
 
 <https://msdn.microsoft.com/en-us/library/3at424ac(v=vs.110).aspx>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NTg0NjE3N119
+eyJoaXN0b3J5IjpbMTkyODg0MTkzNV19
 -->
