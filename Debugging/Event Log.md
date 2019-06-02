@@ -1,6 +1,6 @@
 # Event Log
 
-  * Aside from entering info into the Windows Event Viewer via a TraceListener (See [TraceSource](evernote:///view/26944639/s226/8a65a2da-af4a-4f17-b7d2-5ff87a066e1d/8a65a2da-af4a-4f17-b7d2-5ff87a066e1d/)), you can also do it programmatically.
+  * Aside from entering info into the Windows Event Viewer via a TraceListener (See [TraceSource](TraceSource.md)), you can also do it programmatically.
   * Note that you need Administrator privileges to read some of the event logs.
   * After execution, the 'MyLog' log appears in the 'Applications and Services Logs' section of the Event Viewer.
 
@@ -128,5 +128,5 @@ private static void Log_EntryWritten(object sender, EntryWrittenEventArgs e)
 >source: desktop.win  
 >source-application: evernote.win32  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MDgzMDgwNF19
+eyJoaXN0b3J5IjpbMTMxNjMyNDI3MiwtNzUwODMwODA0XX0=
 -->
