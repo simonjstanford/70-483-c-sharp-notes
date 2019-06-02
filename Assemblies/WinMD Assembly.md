@@ -10,15 +10,6 @@
     * You can't implement an interface that isn't a WinRT interface.
     * You can't derive from types not inside WinRT.
     * ....plus some more (p.218)
-
-
----
-### NOTE ATTRIBUTES
->Created Date: 2016-11-08 19:14:49  
->Last Evernote Update Date: 2016-11-08 19:20:54  
->author: simonjstanford@gmail.com  
->source: desktop.win  
->source-application: evernote.win32  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDAzNTUzMDZdfQ==
+eyJoaXN0b3J5IjpbLTk5NDYyNTkyNiwtMTkwMDM1NTMwNl19
 -->
