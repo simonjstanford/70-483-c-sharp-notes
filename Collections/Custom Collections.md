@@ -61,29 +61,6 @@ see fit.
 
 Also see Indexers
 
-  
-
-![noteattachment1][1f726bb72374c817c7a6eedf618b46cc]
-
-  
-
-![noteattachment2][b39bbda2f24eb0f7da0f2b0b69c149bf]
-
-
----
-### ATTACHMENTS
-[1f726bb72374c817c7a6eedf618b46cc]: media/Custom_Collections.png
-[Custom_Collections.png](media/Custom_Collections.png)
-[b39bbda2f24eb0f7da0f2b0b69c149bf]: media/Custom_Collections-2.png
-[Custom_Collections-2.png](media/Custom_Collections-2.png)
----
-### NOTE ATTRIBUTES
->Created Date: 2017-01-03 19:51:51  
->Last Evernote Update Date: 2017-01-10 20:21:16  
->author: simonjstanford@gmail.com  
->source: desktop.win  
->source-url: file:///C:/Users/simon/AppData/Local/Temp/Temp1_code.zip/ch07.html  
->source-application: evernote.win32  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNTQ3NDQzOF19
+eyJoaXN0b3J5IjpbMzkxMTYxNzM4XX0=
 -->
