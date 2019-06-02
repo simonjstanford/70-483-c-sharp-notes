@@ -1,7 +1,6 @@
 # Constructors
 
-Use : this() in the same way as : base() to execute one constructor from
-another:  
+Use : this() in the same way as : base() to execute one constructor from another:  
 
     public class Wine
     {
@@ -20,5 +19,5 @@ another:
     }
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1OTU5MjIwNF19
+eyJoaXN0b3J5IjpbLTQ3MTY2ODcyMF19
 -->
