@@ -8,13 +8,6 @@ assembly instead of the private key. The private key is only used for signing
 at deployment. This allows the private key to be kept secure. This is done in
 the project -> properties tab. I've found that you can't run or debug an
 application that is set to delayed sign.
-
-
----
-### NOTE ATTRIBUTES
->Created Date: 2016-10-31 20:44:56  
->Last Evernote Update Date: 2016-10-31 20:45:30  
->author: simonjstanford@gmail.com  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMjE3Nzg3OV19
+eyJoaXN0b3J5IjpbMjA5MzI2NjI2NSwtNzIyMTc3ODc5XX0=
 -->
