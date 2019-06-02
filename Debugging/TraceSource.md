@@ -122,6 +122,7 @@ There are several options in the TraceEventType enum:
 
 There are other TraceListeners that can be used, but you can also define your own trace listeners by inheriting from the TraceListener base class and specifying your own implementation for the trace methods.
 
+---
 
 | Name                       | Output                                     |
 |----------------------------|--------------------------------------------|
@@ -131,33 +132,13 @@ There are other TraceListeners that can be used, but you can also define your ow
 | EventSchemaTraceListener   | XML-encoded, schema compliant log file     |
 | TextWriterTraceListener    | TextWriter                                 |
 | XmlWriterTraceListener     | Xml-encoded data to a TextWriter or stream |
-|----------------------------|--------------------------------------------|
-  
 
+---
+ 
 
 You can also create your own TraceListener by deriving from the TraceListener base class.
 
-![noteattachment1][718cc81ef7829f1fc4c8a01b63fb2278]  
-
-
----
-### ATTACHMENTS
-[718cc81ef7829f1fc4c8a01b63fb2278]: media/EmailTraceListener.cs
-[EmailTraceListener.cs](media/EmailTraceListener.cs)
->hash: 718cc81ef7829f1fc4c8a01b63fb2278  
->source-url: file://C:\TFS\DEV\Tersus\Client\Shell\Shell\Helpers\Trace Listeners\EmailTraceListener.cs  
->file-name: EmailTraceListener.cs  
->attachment: true  
-
----
-### NOTE ATTRIBUTES
->Created Date: 2016-11-12 12:17:24  
->Last Evernote Update Date: 2016-11-14 17:35:33  
->author: simonjstanford@gmail.com  
->source: desktop.win  
->source-application: evernote.win32  
-
-
+[EmailTraceListener.cs](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/EmailTraceListener.cs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0NzM3OTc4M119
+eyJoaXN0b3J5IjpbLTExMDA5NjM4NDBdfQ==
 -->
