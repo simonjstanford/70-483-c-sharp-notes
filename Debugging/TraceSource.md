@@ -33,7 +33,7 @@ Firstly, a `System.Diagnostics` section is added to the App.config file. The lis
 ```
   
 
-Then call the TraceSource object from code when you need it:
+Then call the `TraceSource` object from code when you need it:
 
 ```csharp
 using System;
@@ -63,59 +63,63 @@ namespace DebugExample
 
 To turn off logging you can just update the app.config file:
 
-
-    <source name="Log" switchValue="Off" switchType="System.Diagnostics.SourceSwitch">
-      <listeners>
-        <add name="myListener"/>
-        <remove name="Default"/>
-      </listeners>
-    </source>
-    
+```xml
+<source name="Log" switchValue="Off" switchType="System.Diagnostics.SourceSwitch">
+  <listeners>
+    <add name="myListener"/>
+    <remove name="Default"/>
+  </listeners>
+</source>
+```
 
 A trace source can can use more than one listener. The following configuration outputs all traces to the log file in the bin folder and adds critical events to the Windows Event Viewer:
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <configuration>
-      <startup>
-        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
-      </startup>
-    
-      <system.diagnostics>
-        <sources>
-          <source name="Log" switchValue="All" switchType="System.Diagnostics.SourceSwitch">
-            <listeners>
-              <add name="eventLogListener"
-                   type="System.Diagnostics.EventLogTraceListener"
-                   initializeData="TraceListenerLog">
-                <filter type="System.Diagnostics.EventTypeFilter"
-                        initializeData="Critical"/>
-              </add>
-    
-              <add name="myListener"/>
-              <remove name="Default"/>
-            </listeners>
-          </source>
-        </sources>
-        <sharedListeners>
-          <add name="myListener"
-               type="System.Diagnostics.TextWriterTraceListener"
-               initializeData="myListener.log">
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+  </startup>
+
+  <system.diagnostics>
+    <sources>
+      <source name="Log" switchValue="All" switchType="System.Diagnostics.SourceSwitch">
+        <listeners>
+          <add name="eventLogListener"
+               type="System.Diagnostics.EventLogTraceListener"
+               initializeData="TraceListenerLog">
+            <filter type="System.Diagnostics.EventTypeFilter"
+                    initializeData="Critical"/>
           </add>
-        </sharedListeners>
-      </system.diagnostics>
-    </configuration>
+
+          <add name="myListener"/>
+          <remove name="Default"/>
+        </listeners>
+      </source>
+    </sources>
+    <sharedListeners>
+      <add name="myListener"
+           type="System.Diagnostics.TextWriterTraceListener"
+           initializeData="myListener.log">
+      </add>
+    </sharedListeners>
+  </system.diagnostics>
+</configuration>
+```
 
 You can output more detailed information:
 
-    traceSource.TraceInformation("Tracing application...");
-    traceSource.TraceEvent(TraceEventType.Critical, 0, "Critical trace");
-    traceSource.TraceData(TraceEventType.Information, 1, new Person() { FirstName = "Simon", LastName = "Stanford" });
+```csharp
+traceSource.TraceInformation("Tracing application...");
+traceSource.TraceEvent(TraceEventType.Critical, 0, "Critical trace");
+traceSource.TraceData(TraceEventType.Information, 1, new Person() { FirstName = "Simon", LastName = "Stanford" });
+
+//make sure the trace gets written
+traceSource.Flush();
+traceSource.Close();
+```
     
-    //make sure the trace gets written
-    traceSource.Flush();
-    traceSource.Close();
-    
-There are several options in the TraceEventType enum:
+There are several options in the `TraceEventType` enum:
 
   *  **Critical** : most severe option, used for serious errors.
   *  **Error**
@@ -126,7 +130,7 @@ There are several options in the TraceEventType enum:
 
   
 
-There are other TraceListeners that can be used, but you can also define your own trace listeners by inheriting from the TraceListener base class and specifying your own implementation for the trace methods.
+There are other `TraceListeners` that can be used, but you can also define your own trace listeners by inheriting from the `TraceListener` base class and specifying your own implementation for the trace methods.
 
 ---
 
@@ -142,11 +146,12 @@ There are other TraceListeners that can be used, but you can also define your ow
 ---
  
 
-You can also create your own TraceListener by deriving from the TraceListener base class.
+You can also create your own `TraceListener` by deriving from the `TraceListener` base class.
 
 [EmailTraceListener.cs](../media/EmailTraceListener.cs)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUwMTI2MzM3LC0xMTAwOTYzODQwXX0=
+eyJoaXN0b3J5IjpbLTE0MjE4MTQxMzIsLTExMDA5NjM4NDBdfQ
+==
 -->
