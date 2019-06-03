@@ -1,3 +1,5 @@
+# Func & Action
+
 Use `Func<T>` when you don't want to define a delegate. It can take 0-16 parameters and a return type. You can use Lambda expressions or pass a method:
 
 ```csharp
@@ -18,5 +20,5 @@ calc(3, 4);
 Console.WriteLine();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MDk2MjAwOV19
+eyJoaXN0b3J5IjpbLTE3NDE0NjIwMTRdfQ==
 -->
