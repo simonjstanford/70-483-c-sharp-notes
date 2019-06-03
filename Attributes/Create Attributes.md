@@ -39,7 +39,7 @@ Has several properties:
     	}
     }
 
-[AttributesExample.zip](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/AttributesExample.zip)
+[AttributesExample.zip](../media/AttributesExample.zip)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzY2NDkzNDRdfQ==
+eyJoaXN0b3J5IjpbMjEzMDkxODIyNSwtMTIzNjY0OTM0NF19
 -->
