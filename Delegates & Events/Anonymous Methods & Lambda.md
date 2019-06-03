@@ -22,6 +22,7 @@ Lambda expressions are anonymous functions, i.e. a shorthand way to write a meth
 This is an example of an expression Lambda. These are lambdas that are a single expression:
 
 
+```csharp
 public delegate int Calculate(int x, int y);
 
 public void UseDelegate()
@@ -45,31 +46,33 @@ public void UseDelegate()
 
     Console.WriteLine();
 }
+```
 
 You don't need parentheses around the parameter if there is only one:
 
-
+```csharp
 Action<string> note = message => MessageBox.Show(message);
+```
 
 If you want the Lambda to have multiple lines of codes then you need to wrap them in curly brackets:
 
-
+```csharp
 MyLambda = () => 
 {
      //code here
 }
-
+```
 
 Lambda expressions can execute asynchronous tasks using async/await:
 
-
+```csharp
 MyLambda = async () => 
 {
      //code
      await DoSomething();
      //code
 }
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODY5Nzc5MTFdfQ==
+eyJoaXN0b3J5IjpbMTUyNTA0Mzc2NV19
 -->
