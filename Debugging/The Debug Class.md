@@ -2,9 +2,9 @@
 
   * Tracing is a way to monitor the execution of an application while it's running.
   * Logging is always enabled and is used for error reporting and can be configured to to collect data in a particular way, e.g. send an email.
-  * The Debug class: 
+  * The `Debug` class: 
     * Can be used for basic logging and execution assertions. 
-    * Can only be used in a debug build. This happens because the Debug class has a [ConditionalAttribute](ConditionalAttribute.md) with a value of DEBUG is applied to the class. 
+    * Can only be used in a debug build. This happens because the `Debug` class has a [ConditionalAttribute](ConditionalAttribute.md) with a value of DEBUG is applied to the class. 
 
   
 
@@ -37,5 +37,5 @@ Both the Debug and Trace classes have a Listeners collection that holds referenc
 
 <https://msdn.microsoft.com/en-us/library/ttcc4x86.aspx>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMDk1NTc0OSwxMTgxNjk0MzldfQ==
+eyJoaXN0b3J5IjpbLTk4MTYwMDkxLDExODE2OTQzOV19
 -->
