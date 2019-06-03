@@ -66,25 +66,27 @@ A `TraceSwitch` is created in the app.config like this:
     </switches>
   </system.diagnostics>
 </configuration>
-`
+```
+
 And then you can retrieve it in code and use it like this:
 
-    private static TraceSwitch traceSwitch = new TraceSwitch("mySwitch", "Switch in config file");
+```csharp
+private static TraceSwitch traceSwitch = new TraceSwitch("mySwitch", "Switch in config file");
+
+public static void Main( )
+{
+    //...
+    Console.WriteLine("Trace switch {0} configured as {1}", traceSwitch.DisplayName, traceSwitch.Level.ToString());
     
-    public static void Main( )
+    switch (traceSwitch.Level)
     {
-        //...
-        Console.WriteLine("Trace switch {0} configured as {1}", traceSwitch.DisplayName, traceSwitch.Level.ToString());
-        
-        switch (traceSwitch.Level)
-        {
-             case TraceLevel.Error:
-             ... 
-        }
+         case TraceLevel.Error:
+         ... 
     }
-      
+}
+```
 
 <https://msdn.microsoft.com/en-us/library/3at424ac(v=vs.110).aspx>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MTk1OTc1OCw3MDU5OTMyNDldfQ==
+eyJoaXN0b3J5IjpbMTA4NjMyMTAxMyw3MDU5OTMyNDldfQ==
 -->
