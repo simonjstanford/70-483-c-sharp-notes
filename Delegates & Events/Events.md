@@ -41,7 +41,7 @@ public event EventHandler<MyArgs> OnChange
 }
 ```
 
-
+```csharp
 class Program
 {
     static void Main(string[] args)
@@ -133,7 +133,7 @@ class Program
     }
 
 }
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTIwMDM2MjldfQ==
+eyJoaXN0b3J5IjpbLTc5NTQzOTk1Ml19
 -->
