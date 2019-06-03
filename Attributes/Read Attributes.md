@@ -6,6 +6,8 @@
     * GetCustomAttributes() on a Type or MemberInfo object.
 
 ---
+
+```csharp
     class Program
     {
     	static void Main(string[] args)
@@ -43,7 +45,7 @@
     
     	}
     }
-
+```
 [AttributesExample.zip](../media/AttributesExample.zip)
   
 In the example below, the public property 'Reviewed' in DeveloperAttribute is assigned a value when using the attribute. It is not in the attribute's constructor, it is just a public property.
@@ -55,5 +57,6 @@ In the example below, the public property 'Reviewed' in DeveloperAttribute is as
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA1MjMyNjcxLC0xNDA4ODUyODQ4XX0=
+eyJoaXN0b3J5IjpbLTE3OTM2MDE1NjgsLTE0MDg4NTI4NDhdfQ
+==
 -->
