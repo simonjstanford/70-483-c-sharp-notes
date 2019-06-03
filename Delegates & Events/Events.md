@@ -8,13 +8,8 @@ public event EventHandler BallInPlay;
 ```
 
 Using the event keyword means that:
-
- - * The = operator can't be used - only += can be used. This means that something can't overwrite all other event subscriptions. Using +=/-=
-   multiple times on the same method adds/removes the method multiple
-   times. It will be executed more than once!
-
-	* You could use Action<T> or a custom delegate when defining an event. However, EventHandler or EventHandler<T> is used instead as it's defined in the pattern. This is just a delegate with no return type and parameters for the sender and event arguments. Use EventHandler when there is no return value and EventHandler<T> when there is.
-
+ - The = operator can't be used - only += can be used. This means that something can't overwrite all other event subscriptions. Using +=/-= multiple times on the same method adds/removes the method multiple times. It will be executed more than once!
+- You could use `Action<T>` or a custom delegate when defining an event. However, `EventHandler` or `EventHandler<T>` is used instead as it's defined in the pattern. This is just a delegate with no return type and parameters for the sender and event arguments. Use `EventHandler` when there is no return value and `EventHandler<T>` when there is.
 
 
 An event can only be raised by the class that defines it - this means that a derived class can't even raise the event. This is why events are normally raised by an 'On' method.
@@ -23,7 +18,7 @@ Delegates are executed sequentially, but the order is not guaranteed.
 
 You can use a custom event accessor to customise addition/removal of subscribers. This looks a lot like a property:
 
-
+```csharp
 private event EventHandler<MyArgs> onChange = delegate { };
 public event EventHandler<MyArgs> OnChange
 {
@@ -44,7 +39,7 @@ public event EventHandler<MyArgs> OnChange
           }
      }
 }
-
+```
 
 
 class Program
@@ -140,5 +135,5 @@ class Program
 }
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMjQyMjEwOV19
+eyJoaXN0b3J5IjpbLTEyMTIwMDM2MjldfQ==
 -->
