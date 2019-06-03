@@ -4,49 +4,50 @@ Profiling is the process of determining how your application uses certain resour
 
 Best practice is not to prematurely optimise code. Instead, it should be written as readable and maintainable as possible. Performance optimisation should only occur when you run into problems.
 
-A simple way of measuring execution time is by using the Stopwatch class:
+A simple way of measuring execution time is by using the `Stopwatch` class:
 
-    const int numberOfIterations = 100000;
-    
-    static void Main(string[] args)
+```csharp
+const int numberOfIterations = 100000;
+
+static void Main(string[] args)
+{
+    Stopwatch sw = new Stopwatch();
+    sw.Start();
+    Algorithm1();
+    sw.Stop();
+
+    //this can be milliseconds, ticks or formatted time
+    Console.WriteLine(sw.Elapsed);
+
+    sw.Reset();
+    sw.Start();
+    Algorithm2();
+    sw.Stop();
+
+    Console.WriteLine(sw.Elapsed);
+    Console.ReadLine();
+}
+
+private static void Algorithm1()
+{
+    string result = "";
+    for (int i = 0; i < numberOfIterations; i++)
     {
-        Stopwatch sw = new Stopwatch();
-        sw.Start();
-        Algorithm1();
-        sw.Stop();
-    
-        //this can be milliseconds, ticks or formatted time
-        Console.WriteLine(sw.Elapsed);
-    
-        sw.Reset();
-        sw.Start();
-        Algorithm2();
-        sw.Stop();
-    
-        Console.WriteLine(sw.Elapsed);
-        Console.ReadLine();
+        result += 'a';
     }
-    
-    private static void Algorithm1()
+}
+
+private static void Algorithm2()
+{
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < numberOfIterations; i++)
     {
-        string result = "";
-        for (int i = 0; i < numberOfIterations; i++)
-        {
-            result += 'a';
-        }
-    }
-    
-    private static void Algorithm2()
-    {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < numberOfIterations; i++)
-        {
-            sb.Append('a');
-        }
-    
-        string result = sb.ToString();
+        sb.Append('a');
     }
 
+    string result = sb.ToString();
+}
+```
   
 
 Alternatively, you can use the Performance Profiler that comes with Visual Studio. In 2012 it was only available Ultimate, Premium and Professional. The profiler can be found in the Analze menu in the toolbar. The easiest thing to do is to use the Performance Wizard. You have four options:
@@ -58,5 +59,5 @@ Alternatively, you can use the Performance Profiler that comes with Visual Studi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNjYzNzc4NF19
+eyJoaXN0b3J5IjpbNDM0NzIwMTQzLC05MTY2Mzc3ODRdfQ==
 -->
