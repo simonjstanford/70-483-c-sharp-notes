@@ -13,7 +13,7 @@
 #warning test3 //this warning specifically is disabled
 ```
     
-See also #pragm checksum <https://msdn.microsoft.com/enus/library/ms173226.aspx>
+See also #pragm checksum: <https://msdn.microsoft.com/enus/library/ms173226.aspx>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMzQyNjE2MiwtMTIzNDE4NTI2XX0=
+eyJoaXN0b3J5IjpbLTE2MDE1NzAzOTIsLTEyMzQxODUyNl19
 -->
