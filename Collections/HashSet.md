@@ -11,38 +11,39 @@ HashSet enables many mathematical operations on sets, e.g:
 
 ---
 
-    static void Main(string[] args)
+static void Main(string[] args)
+{
+    HashSet<int> oddSet = new HashSet<int>();
+    HashSet<int> evenSet = new HashSet<int>();
+
+    for (int x = 1; x < 10; x++)
     {
-        HashSet<int> oddSet = new HashSet<int>();
-        HashSet<int> evenSet = new HashSet<int>();
-    
-        for (int x = 1; x < 10; x++)
-        {
-            if (x % 2 == 0)
-                evenSet.Add(x);
-            else
-                oddSet.Add(x);
-        }
-    
-        DisplaySet(oddSet);
-        DisplaySet(evenSet);
-    
-        oddSet.UnionWith(evenSet);
-        DisplaySet(oddSet);
-    
-        Console.Read();
-    }
-    
-    private static void DisplaySet(HashSet<int> set)
-    {
-        Console.Write("{");
-        foreach (var item in set)
-        {
-            Console.Write(" {0}", item);
-        }
-        Console.WriteLine(" }");
+        if (x % 2 == 0)
+            evenSet.Add(x);
+        else
+            oddSet.Add(x);
     }
 
+    DisplaySet(oddSet);
+    DisplaySet(evenSet);
+
+    oddSet.UnionWith(evenSet);
+    DisplaySet(oddSet);
+
+    Console.Read();
+}
+
+private static void DisplaySet(HashSet<int> set)
+{
+    Console.Write("{");
+    foreach (var item in set)
+    {
+        Console.Write(" {0}", item);
+    }
+    Console.WriteLine(" }");
+}
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODI4MzI4NjddfQ==
+eyJoaXN0b3J5IjpbLTEzNTEyMTIzODcsLTIwODI4MzI4NjddfQ
+==
 -->
