@@ -1,4 +1,4 @@
-## Covariance
+# Covariance
 
 A method can have a return type that is more derived than that defined in the delegate. E.g. a delegate can have the return type `Textwriter`, so a method with a return type of `StreamWriter` or `StringWriter` could be used.
 
@@ -24,7 +24,7 @@ class Person { }
 class Employee : Person { }
 ```
 
-## Contravariance
+# Contravariance
 
 A method can have a parameter type that is less derived than the delegate type. E.g. a delegate has a `StreamWriter` as a parameter. It points to a method that takes a `TextWriter` as a parameter. This works because `StreamWriter` is derived from `TextWriter` - you could pass in a `StreamWriter` parameter directly to the method, so you can also do the same when calling it via a delegate.
 
@@ -54,5 +54,5 @@ class Person { }
 class Employee : Person { }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI0NjY4NDM3XX0=
+eyJoaXN0b3J5IjpbMTQ0ODIyNTg0M119
 -->
