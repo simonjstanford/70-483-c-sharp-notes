@@ -62,8 +62,9 @@ see fit.
 
 Also see Indexers
 
-![Table 9-7](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/Table9-7.png)
-![Table 9-8](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/Table9-8.png)
+![Table 9-7](../media/Table9-7.png)
+![Table 9-8](../media/Table9-8.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwOTQ0OTA1NiwzOTExNjE3MzhdfQ==
+eyJoaXN0b3J5IjpbMTE3MTcwNzU4NCwxOTA5NDQ5MDU2LDM5MT
+E2MTczOF19
 -->
