@@ -138,7 +138,7 @@ There are other TraceListeners that can be used, but you can also define your ow
 
 You can also create your own TraceListener by deriving from the TraceListener base class.
 
-[EmailTraceListener.cs](https://github.com/simonjstanford/70-483-c-sharp-notes/blob/master/media/EmailTraceListener.cs)
+[EmailTraceListener.cs](../media/EmailTraceListener.cs)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDA5NjM4NDBdfQ==
+eyJoaXN0b3J5IjpbMzc0ODE5MDI1LC0xMTAwOTYzODQwXX0=
 -->
