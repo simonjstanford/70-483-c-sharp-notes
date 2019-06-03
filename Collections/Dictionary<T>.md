@@ -1,4 +1,5 @@
-If you reference an element in a Dictionary by key and the key isn't found then you'll get an exception. Best practice is to check the ContainsKey() method before retrieval.
+If you reference an element in a `Dictionary` by key and the key isn't found then you'll get an exception. Best practice is to check the `ContainsKey()` method before retrieval.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDc5NjQ4MDFdfQ==
+eyJoaXN0b3J5IjpbLTEwMDczMDQ2MzEsLTEzNDc5NjQ4MDFdfQ
+==
 -->
