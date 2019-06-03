@@ -2,49 +2,53 @@
 
 Define custom symbols with #define before any code in a file.
 
-    #define MyDirective
-    
-    using System;
-    
-    namespace CompilerDirectiveExample
+```csharp
+#define MyDirective
+
+using System;
+
+namespace CompilerDirectiveExample
+{
+    class Program
     {
-        class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-    
-    #if MyDirective
-                Console.WriteLine("MyDirective!");
-    #else
-                Console.WriteLine("Not MyDirective!");
-    #endif
-    
-            }
+
+#if MyDirective
+            Console.WriteLine("MyDirective!");
+#else
+            Console.WriteLine("Not MyDirective!");
+#endif
+
         }
     }
-
+}
+```
   
 Use #undef to remove a symbol.
 
-    #undef MyDirective
-    
-    using System;
-    
-    namespace CompilerDirectiveExample
+```csharp
+#undef MyDirective
+
+using System;
+
+namespace CompilerDirectiveExample
+{
+    class Program
     {
-        class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-    
-    #if MyDirective
-                Console.WriteLine("MyDirective!");
-    #else
-                Console.WriteLine("Not MyDirective!");
-    #endif
-            }
+
+#if MyDirective
+            Console.WriteLine("MyDirective!");
+#else
+            Console.WriteLine("Not MyDirective!");
+#endif
         }
     }
+}
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMyNTgwODUxLC04MDg5Mjg3NDVdfQ==
+eyJoaXN0b3J5IjpbLTEyNzcyOTI3NzEsNjMyNTgwODUxLC04MD
+g5Mjg3NDVdfQ==
 -->
