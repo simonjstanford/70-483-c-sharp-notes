@@ -1,16 +1,16 @@
 # HashSet
 
-A HashSet is unordered but doesn't allow duplicates.
+A `HashSet` is unordered but doesn't allow duplicates.
 
-HashSet enables many mathematical operations on sets, e.g:
+`HashSet` enables many mathematical operations on sets, e.g:
 
-  * UnionWith: Union or set addition
-  * IntersectWith: Intersection
-  * ExceptWith: Set subtraction
-  * SymmetricExceptWith: Symmetric difference
+  * `UnionWith`: Union or set addition
+  * `IntersectWith`: Intersection
+  * `ExceptWith`: Set subtraction
+  * `SymmetricExceptWith`: Symmetric difference
 
----
 
+```csharp
 static void Main(string[] args)
 {
     HashSet<int> oddSet = new HashSet<int>();
@@ -42,8 +42,7 @@ private static void DisplaySet(HashSet<int> set)
     }
     Console.WriteLine(" }");
 }
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTEyMTIzODcsLTIwODI4MzI4NjddfQ
-==
+eyJoaXN0b3J5IjpbMTUzMjY3NjU2MywtMjA4MjgzMjg2N119
 -->
