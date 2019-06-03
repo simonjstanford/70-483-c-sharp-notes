@@ -13,10 +13,11 @@
 
 E.g:
 
-    [assembly: AssemblyVersion("1.0.0.0")]
-    [assembly: AssemblyFileVersion("1.0.0.0")]
-
+```
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjI3MTcxNjIsMjA4NTI4NjU5NiwtMj
-cwODMyMzA5XX0=
+eyJoaXN0b3J5IjpbLTE3Nzk1MzYyNzIsLTIwMjI3MTcxNjIsMj
+A4NTI4NjU5NiwtMjcwODMyMzA5XX0=
 -->
