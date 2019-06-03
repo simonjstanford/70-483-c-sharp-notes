@@ -4,7 +4,7 @@
   * Logging is always enabled and is used for error reporting and can be configured to to collect data in a particular way, e.g. send an email.
   * The Debug class: 
     * Can be used for basic logging and execution assertions. 
-    * Can only be used in a debug build. This happens because the Debug class has a [ConditionalAttribute](evernote:///view/26944639/s226/d0e498cb-b643-4c0f-9ffa-02b38be425d4/d0e498cb-b643-4c0f-9ffa-02b38be425d4/) with a value of DEBUG is applied to the class. 
+    * Can only be used in a debug build. This happens because the Debug class has a [ConditionalAttribute](ConditionalAttribute.md) with a value of DEBUG is applied to the class. 
 
   
 
@@ -37,5 +37,5 @@ Both the Debug and Trace classes have a Listeners collection that holds referenc
 
 <https://msdn.microsoft.com/en-us/library/ttcc4x86.aspx>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MTY5NDM5XX0=
+eyJoaXN0b3J5IjpbMTQzMDk1NTc0OSwxMTgxNjk0MzldfQ==
 -->
