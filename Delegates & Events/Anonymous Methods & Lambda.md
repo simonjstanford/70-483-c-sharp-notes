@@ -1,3 +1,5 @@
+## Anonymous Methods & Lambda
+
 This replaces anonymous methods. See [Events](Events.md). 
 
 An anonymous method enables you to define a method without a name. This is done by creating a delegate. Anonymous methods are normally used to define simple event handlers or execute simple tasks on different threads.
@@ -74,5 +76,5 @@ MyLambda = async () =>
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNTA0Mzc2NV19
+eyJoaXN0b3J5IjpbNjgzNTEyNjM5XX0=
 -->
