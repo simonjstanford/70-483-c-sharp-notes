@@ -1,4 +1,4 @@
-## Anonymous Methods & Lambda
+# Anonymous Methods & Lambda
 
 This replaces anonymous methods. See [Events](Events.md). 
 
@@ -76,5 +76,5 @@ MyLambda = async () =>
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgzNTEyNjM5XX0=
+eyJoaXN0b3J5IjpbMjAxNjkyMF19
 -->
