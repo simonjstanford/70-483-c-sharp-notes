@@ -1,3 +1,4 @@
+## Delegates
 
 A simple delegate example:
 
@@ -28,7 +29,7 @@ public void UseDelegate()
 }
 ```
 
-Multicasting:
+### Multicasting
 
 ```csharp
 public delegate void Print();
@@ -61,5 +62,5 @@ public void UseDelegate()
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIzODQ1MzYzXX0=
+eyJoaXN0b3J5IjpbMTY3NzI2NzU2OF19
 -->
