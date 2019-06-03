@@ -4,16 +4,16 @@
   * Note that you need Administrator privileges to read some of the event logs.
   * After execution, the 'MyLog' log appears in the 'Applications and Services Logs' section of the Event Viewer.
 
----  
+```csharp
+if (!EventLog.SourceExists("MySource"))
+{
+    EventLog.CreateEventSource("MySource", "MyLog");
+}
 
-    if (!EventLog.SourceExists("MySource"))
-    {
-        EventLog.CreateEventSource("MySource", "MyLog");
-    }
-    
-    EventLog myLog = new EventLog();
-    myLog.Source = "MySource";
-    myLog.WriteEntry("Something happened!");
+EventLog myLog = new EventLog();
+myLog.Source = "MySource";
+myLog.WriteEntry("Something happened!");
+```
 
 And to read the event log:
 
@@ -67,6 +67,8 @@ Or you could subscribe to an event that fires when a new entry is put in the log
 <https://msdn.microsoft.com/en-us/library/system.diagnostics.eventlog.aspx>
 <https://msdn.microsoft.com/en-us/library/2awhba7a.aspx>
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0NjUzMzMwMCwtNzUwODMwODA0XX0=
+eyJoaXN0b3J5IjpbMTM2MzUzNDc1NiwxNzQ2NTMzMzAwLC03NT
+A4MzA4MDRdfQ==
 -->
