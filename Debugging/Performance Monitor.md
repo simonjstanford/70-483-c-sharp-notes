@@ -2,19 +2,19 @@
 
 You can access the performance monitor programmatically:
 
+```csharp
+using (PerformanceCounter pc = new PerformanceCounter("Memory", "Available Bytes"))
+{
+    string text = "Available memory: ";
+    Console.Write(text);
 
-    using (PerformanceCounter pc = new PerformanceCounter("Memory", "Available Bytes"))
+    while (true)
     {
-        string text = "Available memory: ";
-        Console.Write(text);
-    
-        while (true)
-        {
-            Console.Write(pc.RawValue);
-            Console.SetCursorPosition(text.Length, Console.CursorTop);
-        }
+        Console.Write(pc.RawValue);
+        Console.SetCursorPosition(text.Length, Console.CursorTop);
     }
-
+}
+```
 
 All performance monitors have a unique name within a category.
 
@@ -85,5 +85,6 @@ How to programmatically use Windows Perfmon:
     }
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzIxMTUwNDVdfQ==
+eyJoaXN0b3J5IjpbLTE4NzQ1MjI2ODQsLTE1NzIxMTUwNDVdfQ
+==
 -->
