@@ -13,29 +13,26 @@ Returns an object to provide custom formatting and parsing when converting to/fr
 
 There are three predefined implementations of IFormatProvider that are used for culture specific formatting:
 - NumberFormatInfo. Formats currency, thousands separator and decimal separator.
-	* 
-DateTimeFormatInfo. Formats dates and times.
-	* 
-CultureInfo. Represents a particular culture. Its GetFormat method returns a culture-specific NumberFormatInfo or DateTimeFormatInfo object. 
+- DateTimeFormatInfo. Formats dates and times.
+- CultureInfo. Represents a particular culture. Its GetFormat method returns a culture-specific NumberFormatInfo or DateTimeFormatInfo object. 
 
+## Custom Formatting
 
-
-
-Custom Formatting
 To create your own custom formatting class you need to implement IFormatProvider and ICustomFormatter. An instance of the class is then sent to a formatting method that accepts a IFormatProvider.
 
 Definition of ICustomFormatter:
 
-
+```csharp
 public interface ICustomFormatter
 {
     // Interface does not need to be marked with the serializable attribute
     String Format (String format, Object arg, IFormatProvider formatProvider);
 }
+```
 
 Usage:
 
-
+```csharp
 public class TelephoneFormatter : IFormatProvider, ICustomFormatter
 {
   public object GetFormat(Type formatType)
@@ -104,11 +101,11 @@ public class TestTelephoneFormatter
       Console.WriteLine(String.Format(new TelephoneFormatter(), "{0:I}", 4257884748));
   }
 }
+```
 
-
-
+[enter link description here](../media/MyCustomDateProvider.cs)
 
 https://msdn.microsoft.com/en-us/library/bb762932(v=vs.110).aspx
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjY1NDQzMjFdfQ==
+eyJoaXN0b3J5IjpbLTE0NzU1NzY2MDhdfQ==
 -->
