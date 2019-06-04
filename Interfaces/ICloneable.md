@@ -1,6 +1,5 @@
 # ICloneable
 
-
 Clones an object.
 
 Definition:
@@ -35,5 +34,5 @@ class Person : ICloneable
 
 https://msdn.microsoft.com/en-us/library/system.icloneable(v=vs.110).aspx
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzcyNzA0NTVdfQ==
+eyJoaXN0b3J5IjpbLTE0Njk5Mjk4OTNdfQ==
 -->
