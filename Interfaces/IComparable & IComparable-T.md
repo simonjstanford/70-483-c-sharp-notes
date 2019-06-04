@@ -33,11 +33,12 @@ public interface IComparable<in T>
     //
     int CompareTo(T other);
 }
-
+```
 
 Generic Usage:
 
 
+```csharp
 using System;
 using System.Collections.Generic;
 
@@ -69,10 +70,11 @@ namespace IComparableExample
         }
     }
 }
+```
 
 Non-Generic Usage:
 
-
+```csharp
 using System;
 using System.Collections.Generic;
 
@@ -114,6 +116,7 @@ namespace IComparableExample
         }
     }
 }
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NDEwNTQ0XX0=
+eyJoaXN0b3J5IjpbNzY1MzMxMzc4XX0=
 -->
