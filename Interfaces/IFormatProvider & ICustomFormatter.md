@@ -103,9 +103,9 @@ public class TestTelephoneFormatter
 }
 ```
 
-[enter link description here](../media/MyCustomDateProvider.cs)
 
+[MyCustomDateProvider.cs](../media/MyCustomDateProvider.cs)
 https://msdn.microsoft.com/en-us/library/bb762932(v=vs.110).aspx
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzU1NzY2MDhdfQ==
+eyJoaXN0b3J5IjpbLTEzMTA5Nzc3NDBdfQ==
 -->
