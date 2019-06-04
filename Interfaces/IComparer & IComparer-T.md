@@ -1,18 +1,14 @@
 # IComparer & IComparer<T>
 
 - This is used to define custom sorting of an object.
-	* 
-The interface is implemented in a separate class that is passed as an argument into a sort method.  
-	* 
-Also see IComparable & IComparable.
-
-
+- The interface is implemented in a separate class that is passed as an argument into a sort method.  
+- Also see IComparable & IComparable.
 
 https://msdn.microsoft.com/en-us/library/system.collections.icomparer(v=vs.110).aspx
 
 Definition:
 
-
+```csharp
 namespace System.Collections.Generic
 {   
     using System;
@@ -27,11 +23,11 @@ namespace System.Collections.Generic
         int Compare(T x, T y);
     }
 }
-
+```
 
 Example of usage:
 
-
+```csharp
 class Program
 {
     static void Main(string[] args)
@@ -71,7 +67,7 @@ public class Car
 {
     public int Year { get; set; }
 }
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzE3NTAwMjNdfQ==
+eyJoaXN0b3J5IjpbMTk5MTE1MzgxXX0=
 -->
