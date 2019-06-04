@@ -24,19 +24,16 @@ public interface IEnumerator
 - IEnumerator Defines the way elements in a collection are enumerated through. It contains:
 	- Current: the current object in this enumeration.
 	- MoveNext(). Returns false if there are no more elements in the collection. Must be called before retrieving the first item (thus allowing for empty collections)
-- Reset()
-	* 
-IEnumerable only has one method - GetEnumerator. This is used to retrieve an object that implements IEnumerator. IEnumerable can be seen as an IEnumerator provider and is the base interface that collection classes provide.
-	* 
-The abstraction of iteration allows for multiple consumers to read a collection at the same time without interference.
-	* 
-The generic versions avoid the overhead of boxing value types and strengthen type safety. When implementing the generic versions, the non-generic versions are normally explicitly implemented to hide them from the user.
+	- Reset() 
+- IEnumerable only has one method - GetEnumerator. This is used to retrieve an object that implements IEnumerator. IEnumerable can be seen as an IEnumerator provider and is the base interface that collection classes provide.
+- The abstraction of iteration allows for multiple consumers to read a collection at the same time without interference.
+- The generic versions avoid the overhead of boxing value types and strengthen type safety. When implementing the generic versions, the non-generic versions are normally explicitly implemented to hide them from the user.
 
 
 
 An example of use:
 
-
+```csharp
 string s = "Hello";
 // Because string implements IEnumerable, we can call GetEnumerator():
 
@@ -46,13 +43,15 @@ while (rator.MoveNext())
     char c = (char) rator.Current;
     Console.Write (c + ".");
 }
+```
 
 https://msdn.microsoft.com/en-us/library/system.collections.ienumerable(v=vs.110).aspx
 
-Yield
+## Yield
+
 Implementing both of these interfaces can be a lot of work. If you just want to iterate over an internal collection you can use yield instead:
 
-
+```csharp
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -119,7 +118,7 @@ namespace IEnumerableExample
         }
     }
 }
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMDIwMTk0Nl19
+eyJoaXN0b3J5IjpbOTQyMjM4OTVdfQ==
 -->
