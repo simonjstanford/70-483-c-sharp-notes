@@ -102,7 +102,7 @@ This is done using GroupJoin().  This accepts four arguments:
 
 Note that SelectMany() is used at the end to return the sequence:
 
-
+```csharp
 List<Employee> employees = new List<Employee>()
 {
     new Employee()
@@ -165,47 +165,48 @@ foreach (var employee in employeeByState)
 {
     Debug.WriteLine(employee.LastName + ", " + employee.StateName);
 }
+```
 
-
-Composite Keys
+## Composite Keys
 You can join on composite keys by specifying anonymous types as the inner/outer keys in a Join:
 
-
+```csharp
 var employeeByState = employees.Join(hometowns,
                                         e => new { City = e.City, State = e.State },
                                         h => new { City = h.City, State = h.State },
                                         (e, h) => new { e.LastName, h.CityCode });
+```
 
-
-Concatenation
+## Concatenation
 Similar to the SQL UNION statement.
 
-
+```csharp
 var combinedEmployees = employees.Concat(employees2);
+```
 
 You can combine two collections of different types by using anonymous types:
 
-
+```csharp
 var combinedEmployees = employees.Select(e => new { Name = e.LastName })
                                  .Concat(people.Select(p => new { Name = p.LastName }));
+```
 
 
+## GroupBy
 
-GroupBy
-
-
+```csharp
 var employeesByState = employees.GroupBy(e => e.State);
-
+```
 Or use an anonymous type to group by more than one property:
 
-
+```csharp
 var employeesByState = employees.GroupBy(e => new { e.City, e.State });
+```
 
-
-Skip
+## Skip
 Skip moves past the first N elements in a result and returns the remainder. Take returns the first N elements in a result and discards the remainder:
 
-
+```csharp
 IEnumerable<int> values = Enumerable.Range(0, 10000);
 
 var pagedValues = values.Take(100);
@@ -223,18 +224,17 @@ foreach (var item in pagedValues)
 }
 
 Console.Read();
+```
 
-Casting
-Use OfType<T>() to return only objects that can be cast to T. Use Cast<T>() when you want an exception to be thrown when one of the objects can't be cast.
+## Casting
+Use `OfType<T>()` to return only objects that can be cast to T. Use Cast<T>() when you want an exception to be thrown when one of the objects can't be cast.
 
 Others:
-	* 
-Take()
-	* 
-Distinct()
+- Take()
+- Distinct()
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMzNjEyMDY1XX0=
+eyJoaXN0b3J5IjpbLTY5NTAwMTk5Nl19
 -->
