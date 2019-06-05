@@ -1,8 +1,8 @@
 # TCP
 
-TCP in .NET is handled through the `TcpClient`, `TcpListener` and `Socket` class. `TcpClient` is easier to use, `Socket` is feature rich. `TcpClient` exposes an underlying `Socket object through the TcpClient.Client property.
+TCP in .NET is handled through the `TcpClient`, `TcpListener` and `Socket` class. `TcpClient` is easier to use, `Socket` is feature rich. `TcpClient` exposes an underlying `Socket` object through the `TcpClient.Client` property.
 
-TCP differentiates between a client and a server - the client initiates requests.  Connect() blocks until connection is established, but there is an asynchronous version. NetworkStream provides a method for two-way communication as both client and server can transmit and receive data. 
+TCP differentiates between a client and a server - the client initiates requests.  `Connect()` blocks until connection is established, but there is an asynchronous version. `NetworkStream` provides a method for two-way communication as both client and server can transmit and receive data. 
 
 This is the basic structure of a client request:
 
@@ -18,7 +18,7 @@ using (TcpClient client = new TcpClient())
 }
 ```
 
-This is the basic structure of a server listener. Note that you can use IPAddress.Any to tell the listener to listen on all local IP addresses. AcceptTcpClient() blocks until a connection is received and there is an asynchronous version.
+This is the basic structure of a server listener. Note that you can use `IPAddress.Any` to tell the listener to listen on all local IP addresses. `AcceptTcpClient()` blocks until a connection is received and there is an asynchronous version.
 
 ```csharp
 TcpListener listener = new TcpListener (<ip address>, port);
@@ -36,7 +36,7 @@ while (keepProcessingRequests)
 listener.Stop();
 ```
 
-A full example. Note that BinaryReader/Writer is used instead of StreamReader/Writer. This is because BinaryReader/Writer prefix strings with a length so the reader knows how many bytes to read. This doesn't happen with StreamReader and calling StreamReader.ReadToEnd() might block indefinitely - a NetworkStream doesn't have an end. This plus the read ahead optimisations in StreamReader causing problems means that you shouldn't use it at all.
+A full example. Note that `BinaryReader`/`BinaryWriter` is used instead of `StreamReader`/`StreamWriter`. This is because `BinaryReader`/`BinaryWriter`  prefix strings with a length so the reader knows how many bytes to read. This doesn't happen with `StreamReader` and calling `StreamReader.ReadToEnd()` might block indefinitely - a `NetworkStream` doesn't have an end. This plus the read ahead optimisations in `StreamReader` causing problems means that you shouldn't use it at all.
 
 ```csharp
 static void Main()
@@ -74,5 +74,5 @@ static void Server() // Handles a single client request, then exits.
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NjE2NzY2NV19
+eyJoaXN0b3J5IjpbLTEzMjg5NDUwMzldfQ==
 -->
