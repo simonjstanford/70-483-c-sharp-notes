@@ -117,12 +117,12 @@ foreach (var employee in employeeByState)
 {
     Debug.WriteLine(employee.LastName + ", " + employee.StateName);
 }
+```
 
-
-Composite Keys
+## Composite Keys
 This can be done by creating and comparing two anonymous types from the two collections that are being joined.
 
-
+```csharp
 List<Employee> employees = new List<Employee>()
 {
     new Employee()
@@ -179,11 +179,11 @@ foreach (var employee in employeeByState)
 {
     Debug.WriteLine(employee.LastName + ", " + employee.CityCode);
 }
+```
 
+## Group
 
-Group
-
-
+```csharp
 List<Employee> employees = new List<Employee>()
 {
     new Employee()
@@ -221,10 +221,7 @@ foreach (var employeeGroup in employeesByState)
         Debug.WriteLine(employee.LastName + ", " + employee.State);
     }
 }
-
-
-
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NTE3MjM5M119
+eyJoaXN0b3J5IjpbLTE5NTk1MjY4ODFdfQ==
 -->
