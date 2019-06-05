@@ -44,7 +44,7 @@ new XElement("Contacts",
 );
 ```
 
-A more complete example. Note that if you pass a type as an argument into an XElement that is not an XElement or XAttribute then it will become the contents of the element:
+A more complete example. Note that if you pass a type as an argument into an `XElement` that is not an `XElement` or `XAttribute` then it will become the contents of the element:
 
 ```csharp
 XElement people = new XElement("People",
@@ -84,5 +84,5 @@ Console.Read();
 http://msdn.microsoft.com/en-us/library/bb387061.aspx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ2ODI5MDBdfQ==
+eyJoaXN0b3J5IjpbMTk1ODQ4NTUwMF19
 -->
