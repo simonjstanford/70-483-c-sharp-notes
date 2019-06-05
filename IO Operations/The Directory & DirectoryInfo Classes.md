@@ -83,24 +83,20 @@ private static void ListDirectories(DirectoryInfo directory, string searchPatter
 }
 ```
 
-The search pattern in GetDirectories() can have wildcards:
-Wildcard
-Description
-Example
-*
-Zero or more characters
-*m* matches me, mmm
-?
-Exactly one character
-?edia matches Media
+The search pattern in `GetDirectories()` can have wildcards:
 
 
+| Wildcard | Description             | Example             |
+|----------|-------------------------|---------------------|
+| *        | Zero or more characters | *m* matches me, mmm |
+| ?        | Exactly one character   | ?edia matches Media |
 
-You can use EnumerateDirectories instead of GetDirectories if you want to start enumerating the directory collection before the search has completed. This is helpful when searching a large directory structure.
 
-Directory.Move() and DirectoryInfo.MoveTo() are used to move the directory to another location.
+You can use `EnumerateDirectories` instead of `GetDirectories` if you want to start enumerating the directory collection before the search has completed. This is helpful when searching a large directory structure.
 
-Directory.GetFiles() returns an array of strings and DirectoryInfo.GetFiles() returns an array of FileInfo objects, but both are used to get a list of the files within a directory.
+`Directory.Move()` and `DirectoryInfo.MoveTo()` are used to move the directory to another location.
+
+`Directory.GetFiles()` returns an array of strings and `DirectoryInfo.GetFiles()` returns an array of `FileInfo `objects, but both are used to get a list of the files within a directory.
 
 
 foreach (var file in Directory.GetFiles(@"C:\Windows"))
@@ -115,5 +111,5 @@ foreach (var file in directoryInfo.GetFiles())
 }
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTIwMzI0NjBdfQ==
+eyJoaXN0b3J5IjpbLTE1MjgyMjIzMTBdfQ==
 -->
