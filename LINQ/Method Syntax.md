@@ -5,49 +5,46 @@
 
 ```csharp
 var result = data.Where(d => d + 2 == 2);
-`
+```
+
 You can use multiple 'Where' clauses:
 
-
+```csharp
 var eventNumber = myArray.Where(i => i % 2 == 0).Where(i => i > 5);
+```
 
+## Ordering
 
-Ordering
 Use OrderBy, OrderByDescending and ThenBy.
 
 
-Projection
+## Projection
 Use Select:
 
-
+```csharp
 var lastNames = people.Select(p => p.LastName);
+```
 
 You can project to anonymous types in method syntax too:
 
-
+```csharp
 var names = people.Select(p => new { p.FirstName, p.LastName });
+```
 
-
-SelectMany
+## SelectMany
 Flattens two sequences into one.
 
 See https://msdn.microsoft.com/en-us/library/bb534336(v=vs.110).aspx
 
 
-Joining
+## Joining
 Joins two sequences together. Here, the Join method takes four parameters:
-	* 
-The collection to join to
-	* 
-The key of the outer collection
-	* 
-The key of the inner collection
-	* 
-A lambda expression that creates an anonymous type with the result
+- The collection to join to
+- The key of the outer collection
+- The key of the inner collection
+- A lambda expression that creates an anonymous type with the result
 
-
-
-
+```csharp
 List<Employee> employees = new List<Employee>()
 {
     new Employee()
@@ -93,22 +90,15 @@ foreach (var employee in employeeByState)
 {
     Debug.WriteLine(employee.LastName + ", " + employee.StateName);
 }
+```
 
-
-Outer Join
+## Outer Join
 This is done using GroupJoin().  This accepts four arguments:
-	* 
-The collection to join to.
-	* 
-The key of the outer collection
-	* 
-The key of the inner collection
-	* 
-A lambda expression that iterates through the join and creates a new anonymous type.
-	* 
-DefaultIfEmpty() is used to set a default value for items in the collection that had no match.
-
-
+- The collection to join to.
+- The key of the outer collection
+- The key of the inner collection
+- A lambda expression that iterates through the join and creates a new anonymous type.
+- DefaultIfEmpty() is used to set a default value for items in the collection that had no match.
 
 Note that SelectMany() is used at the end to return the sequence:
 
@@ -246,5 +236,5 @@ Distinct()
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNzIzMjQ4MF19
+eyJoaXN0b3J5IjpbNTMzNjEyMDY1XX0=
 -->
