@@ -11,7 +11,7 @@ var directory2 = new DirectoryInfo(@"C:\Temp\Test2");
 directory2.Create();
 ```
 
-You can use Directory/DirectoryInfo to remove directories. If it does not exist then a DirectoryNotFoundException is thrown.
+You can use `Directory`/`DirectoryInfo` to remove directories. If it does not exist then a `DirectoryNotFoundException` is thrown.
 
 ```csharp
 if (Directory.Exists(@"C:\Temp\Test1"))
@@ -26,9 +26,9 @@ if (directoryInfo.Exists)
 }
 ```
 
-Use the DirectorySecurity class to change the access control of a directory. Note that the application must have the rights to make this modification.
+Use the `DirectorySecurity` class to change the access control of a directory. Note that the application must have the rights to make this modification.
 
-
+```csharp
 var directory2 = new DirectoryInfo(@"C:\Temp\Test2");
 directory2.Create();
 
@@ -37,10 +37,11 @@ security.AddAccessRule(new FileSystemAccessRule("everyone",
                                                 FileSystemRights.ReadAndExecute,
                                                 AccessControlType.Allow));
 directory2.SetAccessControl(security);
+```
 
-Use GetDirectories() to search a directory for directories. There are overloads to add a SearchOption, e.g. AllDirectories.
+Use `GetDirectories()` to search a directory for directories. There are overloads to add a `SearchOption`, e.g. `AllDirectories`.
 
-
+```csharp
 static void Main(string[] args)
 {
     //List the subdirectories for Program Files containing the character 'a' with a maximum depth of 5
@@ -80,6 +81,7 @@ private static void ListDirectories(DirectoryInfo directory, string searchPatter
         Console.WriteLine(indent + "Can't find: " + directory.Name);
     }
 }
+```
 
 The search pattern in GetDirectories() can have wildcards:
 Wildcard
@@ -91,6 +93,8 @@ Zero or more characters
 ?
 Exactly one character
 ?edia matches Media
+
+
 
 You can use EnumerateDirectories instead of GetDirectories if you want to start enumerating the directory collection before the search has completed. This is helpful when searching a large directory structure.
 
@@ -111,5 +115,5 @@ foreach (var file in directoryInfo.GetFiles())
 }
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMTAxMzJdfQ==
+eyJoaXN0b3J5IjpbLTE2NTIwMzI0NjBdfQ==
 -->
