@@ -1,7 +1,6 @@
 # Implicitly Typed Variables
 
-
 This is using var - it implicitly infers the type of var. After inferring the type it is strongly typed. This helps LINQ determine a type at compile time.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjcyMTM3MjJdfQ==
+eyJoaXN0b3J5IjpbMTQxMjgxNzg0OF19
 -->
