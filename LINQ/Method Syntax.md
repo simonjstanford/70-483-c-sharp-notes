@@ -7,7 +7,7 @@
 var result = data.Where(d => d + 2 == 2);
 ```
 
-You can use multiple 'Where' clauses:
+You can use multiple `Where` clauses:
 
 ```csharp
 var eventNumber = myArray.Where(i => i % 2 == 0).Where(i => i > 5);
@@ -15,11 +15,11 @@ var eventNumber = myArray.Where(i => i % 2 == 0).Where(i => i > 5);
 
 ## Ordering
 
-Use OrderBy, OrderByDescending and ThenBy.
+Use `OrderBy`, `OrderByDescending` and `ThenBy`.
 
 
 ## Projection
-Use Select:
+Use `Select`:
 
 ```csharp
 var lastNames = people.Select(p => p.LastName);
@@ -236,5 +236,5 @@ Others:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NTAwMTk5Nl19
+eyJoaXN0b3J5IjpbLTE5MzA5MTUzMF19
 -->
