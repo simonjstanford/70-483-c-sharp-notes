@@ -12,7 +12,7 @@ You can use multiple where clauses to add extra checks. This is the same as a wh
 
 Where clauses can appear anywhere in the statement as long as it's not the first line.
 
-Orderby can have multiple items to order by, separated with a comma. Use 'descending' to invert.
+`Orderby` can have multiple items to order by, separated with a comma. Use 'descending' to invert.
 
 You can combine data from multiple sources:
 
@@ -43,7 +43,7 @@ var result = from o in orders
 ```
 
 ## Join
-Join is used to join together two sources. Note the use of the 'equals' keyword instead of ==. You can't use > or <.
+`Join` is used to join together two sources. Note the use of the `equals` keyword instead of `==`. You can't use `>` or `<`.
 
 ```csharp
 string[] popularProductNames = { "A", "B" };
@@ -223,5 +223,5 @@ foreach (var employeeGroup in employeesByState)
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTk1MjY4ODFdfQ==
+eyJoaXN0b3J5IjpbLTc1MzA3MDIxMV19
 -->
