@@ -62,7 +62,7 @@ var employeeByState = from e in employees
 ```
 
 ## Left Join
-You can simulate a LEFT JOIN using a group join and DefaultIfEmpty(). Here, you create a group out of the join and then use DefaultIfEmpty() to create a default value for each item in the join that didn't have a match.
+You can simulate a `LEFT JOIN` using a group join and `DefaultIfEmpty()`. Here, you create a group out of the join and then use `DefaultIfEmpty()` to create a default value for each item in the join that didn't have a match.
 
 ```csharp
 List<Employee> employees = new List<Employee>()
@@ -223,5 +223,5 @@ foreach (var employeeGroup in employeesByState)
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MzA3MDIxMV19
+eyJoaXN0b3J5IjpbMTkyNDAyMDU2N119
 -->
