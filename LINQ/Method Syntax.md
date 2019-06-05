@@ -38,7 +38,7 @@ See https://msdn.microsoft.com/en-us/library/bb534336(v=vs.110).aspx
 
 
 ## Joining
-Joins two sequences together. Here, the Join method takes four parameters:
+Joins two sequences together. Here, the `Join` method takes four parameters:
 - The collection to join to
 - The key of the outer collection
 - The key of the inner collection
@@ -93,14 +93,14 @@ foreach (var employee in employeeByState)
 ```
 
 ## Outer Join
-This is done using GroupJoin().  This accepts four arguments:
+This is done using `GroupJoin()`.  This accepts four arguments:
 - The collection to join to.
 - The key of the outer collection
 - The key of the inner collection
 - A lambda expression that iterates through the join and creates a new anonymous type.
-- DefaultIfEmpty() is used to set a default value for items in the collection that had no match.
+- `DefaultIfEmpty()` is used to set a default value for items in the collection that had no match.
 
-Note that SelectMany() is used at the end to return the sequence:
+Note that `SelectMany()` is used at the end to return the sequence:
 
 ```csharp
 List<Employee> employees = new List<Employee>()
@@ -168,7 +168,7 @@ foreach (var employee in employeeByState)
 ```
 
 ## Composite Keys
-You can join on composite keys by specifying anonymous types as the inner/outer keys in a Join:
+You can join on composite keys by specifying anonymous types as the inner/outer keys in a `Join`:
 
 ```csharp
 var employeeByState = employees.Join(hometowns,
@@ -178,7 +178,7 @@ var employeeByState = employees.Join(hometowns,
 ```
 
 ## Concatenation
-Similar to the SQL UNION statement.
+Similar to the `SQL UNION` statement.
 
 ```csharp
 var combinedEmployees = employees.Concat(employees2);
@@ -227,14 +227,14 @@ Console.Read();
 ```
 
 ## Casting
-Use `OfType<T>()` to return only objects that can be cast to T. Use Cast<T>() when you want an exception to be thrown when one of the objects can't be cast.
+Use `OfType<T>()` to return only objects that can be cast to `T`. Use `Cast<T>()` when you want an exception to be thrown when one of the objects can't be cast.
 
 Others:
-- Take()
-- Distinct()
+- `Take()`
+- `Distinct()`
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzA5MTUzMF19
+eyJoaXN0b3J5IjpbLTE3MTgxMjE1OTRdfQ==
 -->
