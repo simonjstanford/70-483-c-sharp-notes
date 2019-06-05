@@ -96,9 +96,9 @@ You can use `EnumerateDirectories` instead of `GetDirectories` if you want to st
 
 `Directory.Move()` and `DirectoryInfo.MoveTo()` are used to move the directory to another location.
 
-`Directory.GetFiles()` returns an array of strings and `DirectoryInfo.GetFiles()` returns an array of `FileInfo `objects, but both are used to get a list of the files within a directory.
+`Directory.GetFiles()` returns an array of strings and `DirectoryInfo.GetFiles()` returns an array of `FileInfo` objects, but both are used to get a list of the files within a directory.
 
-
+```csharp
 foreach (var file in Directory.GetFiles(@"C:\Windows"))
 {
     Console.WriteLine(file);
@@ -109,7 +109,7 @@ foreach (var file in directoryInfo.GetFiles())
 {
     Console.WriteLine(file.FullName);
 }
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjgyMjIzMTBdfQ==
+eyJoaXN0b3J5IjpbLTE5OTE3MDQ2NTddfQ==
 -->
