@@ -3,7 +3,7 @@
 
 Used to load the assembly, read metadata about the assembly and create instances of the types in the assembly. 
 
-
+![Table 8-3](../media/The_Assembly_Class.png)
 
 Example usage:
 
@@ -20,6 +20,8 @@ Console.Read();
 ```
 
 ## Method Usage
+
+![Table 8-3](../media/The_Assembly_Class-2.png)
 
 
 E.g:
@@ -118,5 +120,5 @@ class Program
     }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NzgyMzc5NywtMTg4ODc3NzMzNl19
+eyJoaXN0b3J5IjpbNDI0ODI0MjQ0LC0xODg4Nzc3MzM2XX0=
 -->
