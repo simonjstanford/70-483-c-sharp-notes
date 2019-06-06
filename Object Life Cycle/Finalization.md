@@ -12,25 +12,22 @@
 - Destructors cannot be called directly.
 - Destructors cannot have modifiers or parameters.
 
-
-
-
-
+```csharp
  public class Test
-    {
-        ~Test()
-        {
-            //this code is called when the finalize method executes
-        }
-    }
+ {
+     ~Test()
+     {
+         //this code is called when the finalize method executes
+     }
+ }
+```
 
-
-Calling Dispose From a Finalizer
+## Calling Dispose From a Finalizer
 See the example below. The boolean overload is to ensure that only Dispose() cleans up external objects. Finalization should never try to clean up external objects because they will be in an unpredictable state - they might already be finalized!
 
-Also see IDisposable
+Also see [IDisposable](..%5CInterfaces%5CIDisposable.md)
 
-
+```csharp
 class Test : IDisposable
 {
     public void Dispose() // NOT virtual
@@ -57,8 +54,7 @@ class Test : IDisposable
         // ...
     }
 }
-
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3OTY0NzA0Nl19
+eyJoaXN0b3J5IjpbLTMzOTg5MDI5N119
 -->
