@@ -25,7 +25,7 @@
 ## Calling Dispose From a Finalizer
 See the example below. The boolean overload is to ensure that only Dispose() cleans up external objects. Finalization should never try to clean up external objects because they will be in an unpredictable state - they might already be finalized!
 
-Also see [IDisposable](..%5CInterfaces%5CIDisposable.md)
+Also see [IDisposable](../Interfaces/IDisposable.md)
 
 ```csharp
 class Test : IDisposable
@@ -56,5 +56,5 @@ class Test : IDisposable
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzOTg5MDI5N119
+eyJoaXN0b3J5IjpbMTczODc2ODcxMV19
 -->
