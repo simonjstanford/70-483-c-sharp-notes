@@ -118,7 +118,7 @@ targetClass.Members.Add(exponentMethod);
 ## CodeDOMProvider
 This is used to generate the class file. The following creates a C# file with single line spacing and the { } characters on new lines. 
 
-
+```csharp
 CodeDomProvider provider = CodeDomProvider.CreateProvider("CSharp");
 CodeGeneratorOptions options = new CodeGeneratorOptions();
 options.BlankLinesBetweenMembers = false;
@@ -128,11 +128,11 @@ using (StreamWriter sourceWriter = new StreamWriter(@"c:\CodeDom\Calculator." + 
 {
     provider.GenerateCodeFromCompileUnit(codeCompileUnit, sourceWriter, options);
 }
-
+```
 
 Here's another simple example that also ind
 
-
+```csharp
 // create the object graph
 CodeCompileUnit compileUnit = new CodeCompileUnit();
 CodeNamespace myNamespace = new CodeNamespace("MyNamespace");
@@ -156,7 +156,7 @@ using (StreamWriter sw = new StreamWriter(@"HelloWorld.cs", false))
     provider.GenerateCodeFromCompileUnit(compileUnit, tw, new CodeGeneratorOptions());
     tw.Close();
 }
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NTY5ODM3NF19
+eyJoaXN0b3J5IjpbLTE3NTAzMjAyNDRdfQ==
 -->
