@@ -1,7 +1,7 @@
 # The Type Class
 
 
-This represents a class, interface, array, value type, enumeration, parameter, generic type definition and open or closed constructed generic types. Open constructed generic types seem to be 'T' in a type definition, closed constructed types are actual type names - http://stackoverflow.com/questions/1735035/generics-open-and-closed-constructed-types. You can use typeof() or GetType() to get a Type object.
+This represents a class, interface, array, value type, enumeration, parameter, generic type definition and open or closed constructed generic types. Open constructed generic types seem to be 'T' in a type definition, closed constructed types are actual type names - http://stackoverflow.com/questions/1735035/generics-open-and-closed-constructed-types. You can use `typeof()` or `GetType()` to get a `Type` object.
 
 ![Table 8-5](../media/The_Type_Class.png)
 
@@ -47,7 +47,7 @@ for(int i = 0; i <= myDataTableConstructors.Length - 1; i++)
 
 ## GetEnumName, GetEnumNames, GetEnumValue
 
-Note that GetEnumValue returns the enum name, not the underlying enum number.
+Note that `GetEnumValue` returns the enum name, not the underlying enum number.
 
 ```csharp
 Type myCustomEnumType = typeof(MyCustomEnum);
@@ -123,14 +123,14 @@ class Program
 
 Note that you can also set the value of a field of property:
 
-
+```csharp
 ReflectionExample reflectionExample = new ReflectionExample();
 Type reflectionExampleType = typeof(ReflectionExample);
 
 reflectionExampleType.GetField("_privateField", BindingFlags.NonPublic | BindingFlags.Instance).SetValue(reflectionExample, "My New Value");
 
 Debug.Print(string.Format("Private Field Value: {0}", reflectionExample.PrivateField));
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjA2ODY4MThdfQ==
+eyJoaXN0b3J5IjpbLTE3Mjg0ODk0NjddfQ==
 -->
