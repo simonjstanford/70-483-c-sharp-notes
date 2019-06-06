@@ -9,8 +9,8 @@
 
 There is a class for every time of statement that you can make:
 
-![CodeDom2](../media/CodeDom2.png)
-![CodeDom3](../media/CodeDom3.png)
+![CodeDom2](../media/CodeDom-2.png)
+![CodeDom3](../media/CodeDom-3.png)
 
 Notes:
 - A `BinaryOperatorExpression` is used as an operation executed against two variables, e.g. add, subtract, greater than, less than. See https://msdn.microsoft.com/en-us/library/system.codedom.codebinaryoperatorexpression(v=vs.110).aspx and https://msdn.microsoft.com/en-us/library/system.codedom.codebinaryoperatortype(v=vs.110).aspx.
@@ -160,5 +160,5 @@ using (StreamWriter sw = new StreamWriter(@"HelloWorld.cs", false))
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxODc1OTQ2NF19
+eyJoaXN0b3J5IjpbOTIzMjQ5MTg0XX0=
 -->
