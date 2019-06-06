@@ -3,11 +3,11 @@
 
 This represents a class, interface, array, value type, enumeration, parameter, generic type definition and open or closed constructed generic types. Open constructed generic types seem to be 'T' in a type definition, closed constructed types are actual type names - http://stackoverflow.com/questions/1735035/generics-open-and-closed-constructed-types. You can use typeof() or GetType() to get a Type object.
 
-
+![Table 8-5](../media/The_Type_Class.png)
 
 Example of usage:
 
-
+```csharp
 int myInt = 0;
 Type type = myInt.GetType();
 
@@ -17,14 +17,14 @@ Console.WriteLine(type.IsValueType);
 Console.WriteLine(type.Name);
 Console.WriteLine(type.Namespace);
 Console.Read();
+```
 
+![Table 8-6](../media/The_Assembly_Class-2.png)
+![Table 8-6](../media/The_Type_Class-3.png)
 
+## GetConstructors
 
-
-
-GetConstructors
-
-
+```csharp
 DataTable myDataTable = new DataTable();
 Type myDataTableType = myDataTable.GetType();
 ConstructorInfo[] myDataTableConstructors = myDataTableType.GetConstructors();
@@ -131,5 +131,5 @@ reflectionExampleType.GetField("_privateField", BindingFlags.NonPublic | Binding
 Debug.Print(string.Format("Private Field Value: {0}", reflectionExample.PrivateField));
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg3MDQ1NzE5XX0=
+eyJoaXN0b3J5IjpbNjI4NTMzNzA2XX0=
 -->
