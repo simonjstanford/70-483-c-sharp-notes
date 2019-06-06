@@ -43,13 +43,13 @@ for(int i = 0; i <= myDataTableConstructors.Length - 1; i++)
         Debug.Print(string.Format("Parameter Type: {0}", parameter.ParameterType.Name));
     }
 }
+```
 
-
-GetEnumName, GetEnumNames, GetEnumValue
+## GetEnumName, GetEnumNames, GetEnumValue
 
 Note that GetEnumValue returns the enum name, not the underlying enum number.
 
-
+```csharp
 Type myCustomEnumType = typeof(MyCustomEnum);
 
 string[] enumNames = myCustomEnumType.GetEnumNames();
@@ -70,12 +70,12 @@ for (int i = 1; i <= 3; i++)
     string enumName = myCustomEnumType.GetEnumName(i);
     Debug.Print(string.Format("{0}: {1}", enumName, i));
 }
+```
+
+## GetField, GetFields, GetProperty & GetProperties
 
 
-GetField, GetFields, GetProperty & GetProperties
-
-
-
+```csharp
 class Program
     {
         static void Main(string[] args)
@@ -119,6 +119,7 @@ class Program
             return true;
         }
     }
+```
 
 Note that you can also set the value of a field of property:
 
@@ -131,5 +132,5 @@ reflectionExampleType.GetField("_privateField", BindingFlags.NonPublic | Binding
 Debug.Print(string.Format("Private Field Value: {0}", reflectionExample.PrivateField));
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI4NTMzNzA2XX0=
+eyJoaXN0b3J5IjpbLTE3MjA2ODY4MThdfQ==
 -->
