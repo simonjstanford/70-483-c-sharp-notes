@@ -1,36 +1,19 @@
 # Null-coalescing operator
 
-Null-coalescing operator provides a default value for nullable value types or
-reference types. I.e, x is returned if it's not null, else -1:  
+Null-coalescing operator provides a default value for nullable value types or reference types. I.e, x is returned if it's not null, else -1:  
 
-  
-
+```csharp
 int? x = null;
-
 int y = x ?? -1;
-
-  
+```
 
 It can be nested:
 
-  
-
+```csharp
 int? x = null;
-
 int? z = null;
-
 int y = x ?? z ?? -1;
-
-  
-
-
----
-### NOTE ATTRIBUTES
->Created Date: 2017-01-10 19:45:25  
->Last Evernote Update Date: 2017-01-10 19:45:30  
->author: simonjstanford@gmail.com  
->source: desktop.win  
->source-application: evernote.win32  
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MDI0MDQ4NF19
+eyJoaXN0b3J5IjpbLTEwMTU5MTk2OTUsMTQ3MDI0MDQ4NF19
 -->
