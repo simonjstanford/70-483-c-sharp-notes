@@ -21,8 +21,9 @@ Console.Read();
 
 ## Method Usage
 
-![Table 8-3](../media/The_Assembly_Class-2.png)
+![Table 8-4](../media/The_Assembly_Class-2.png)
 
+![Table 8-4](../media/The_Assembly_Class-3.png)
 
 E.g:
 
@@ -120,5 +121,5 @@ class Program
     }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI0ODI0MjQ0LC0xODg4Nzc3MzM2XX0=
+eyJoaXN0b3J5IjpbLTg4NjgzOTkxNCwtMTg4ODc3NzMzNl19
 -->
