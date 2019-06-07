@@ -79,7 +79,14 @@ public static void ConvertToUnsecureString(SecureString securePassword)
 The `Marshall` class has several methods that can be used to decrypt `SecureString`. They each have an associated method for clearing the `SecureString` from memory:
 
 
+| Decrypt Method                   | Clear Memory Method        |
+|----------------------------------|----------------------------|
+| SecureStringToBSTR               | ZeroFreeBSTR               |
+| SecureStringToCoTaskMemAnsi      | ZeroFreeCoTaskMemAnsi      |
+| SecureStringToCoTaskMemUnicode   | ZeroFreeCoTaskmemUnicode   |
+| SecureStringToGlovalAllocAnsi    | ZeroFreeGlobalAllocAnsi    |
+| SecureStringToGlobalAllocUnicode | ZeroFreeGlobalAllocUnicode |
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzA2Mjc1MDVdfQ==
+eyJoaXN0b3J5IjpbLTQwMDY1NTc4OSwtMTE3MDYyNzUwNV19
 -->
