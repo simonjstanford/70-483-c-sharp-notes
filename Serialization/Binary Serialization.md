@@ -1,19 +1,15 @@
 # Binary Serialization
 
 
-	* Used when you don't need to be able to read the serialized data.
-	* 
-Helpful when you want to serialize data that isn't suitable for XML, e.g. an image.
-	* 
-Binary serialization is done using the System.Runtime.Serialization and System.Runtime.Formatters.Binary namespaces.
-	* 
-Private fields are serialized by default (different to XML serialization) so use the [NonSerialized] attribute to stop specific fields being serialized.
-	* 
-Use OptionalFieldAttribute to tell the serializer that a field may not be saved in a serialized object. This can be used when you've added a new property to a class.
+- Used when you don't need to be able to read the serialized data.
+- Helpful when you want to serialize data that isn't suitable for XML, e.g. an image.
+- Binary serialization is done using the `System.Runtime.Serialization` and System.Runtime.Formatters.Binary namespaces.
+- Private fields are serialized by default (different to XML serialization) so use the [NonSerialized] attribute to stop specific fields being serialized.
+- Use OptionalFieldAttribute to tell the serializer that a field may not be saved in a serialized object. This can be used when you've added a new property to a class.
 
 
 
-
+```csharp
 class Program
 {
     static void Main(string[] args)
@@ -51,44 +47,40 @@ public class Person
     [NonSerialized]
     private bool IsDirty = false;
 }
-
+```
 
 You can tailor the serialization/deserialization process by executing methods that take a StreamingContext as a parameter. This is done by creating the methods inside the class to be serialized and decorating them with one of four attributes:
-	* 
-OnDeserializedAttribute
-	* 
-OnDeserializingAttribute
-	* 
-OnSerializedAttribute
-	* 
-OnSerializingAttribute
+- OnDeserializedAttribute
+- OnDeserializingAttribute
+- OnSerializedAttribute
+- OnSerializingAttribute
 
 
-
-
+```csharp
 [OnDeserialized()]
 internal void OnDeserializedMethod(StreamingContext context)
 {
      Console.WriteLine("OnSerialized.");
 }
+```
 
-
-ISerializable
+## ISerializable
 You can implement ISerializable to gain more control over the serialization process. This would allow you to not serialize sensitive data or even encrypt it.
 
 Definition:
 
-
+```csharp
 public interface ISerializable
 {
     void GetObjectData(SerializationInfo info, StreamingContext context);
 }
+```
 
 GetObjectData() method is called when an object is serialized. It is used to add key/value pairs of the data you want to serialize to the SerializationInfo object that is passed to the method. This method needs to be decorated with a SecurityPermission attribute so that it's allowed to execute serialization/deserialization code.  A protected constructor is also required which is used to retrieve the values and initialize your object during deserialization.
 
 Usage:
 
-
+```csharp
 [Serializable]
 public class Person : ISerializable
 {
@@ -119,7 +111,7 @@ public class Person : ISerializable
         info.AddValue("Value3", Age);
     }
 }
- 
+ ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MjczNTA2N119
+eyJoaXN0b3J5IjpbMTE0ODg5MjIxOF19
 -->
