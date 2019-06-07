@@ -2,11 +2,10 @@
 
 
 - This was created for SOAP messaging for use in web services.
-- XmlSerializer is loosely coupled using attributes to map nodes to properties. If the serializer can't find a property during deserialization then it will just set it to its default value.
-- You need to add the [Serializable] attribute to the class. If the object can't be serialized then an exception will be thrown at runtime.
+- `XmlSerializer` is loosely coupled using attributes to map nodes to properties. If the serializer can't find a property during deserialization then it will just set it to its default value.
+- You need to add the `[Serializable]` attribute to the class. If the object can't be serialized then an exception will be thrown at runtime.
 - All members are serialized unless they opt-out.
-- The XmlIgnore attribute is used to not serialize a member.
-
+- The `XmlIgnore` attribute is used to not serialize a member.
 
 
 Drawbacks:
@@ -60,7 +59,7 @@ public class Person
 }
 ```
 
-There are attributes you can use to change how the XML is created. Note that derived classes needs to be identified in the XmlSerializer constructor. 
+There are attributes you can use to change how the XML is created. Note that derived classes needs to be identified in the `XmlSerializer` constructor. 
 
 ```csharp
 class Program
@@ -141,7 +140,8 @@ public class VipOrder : Order
 ```
 
 ## XmlAttributes
-The XmlAttributes class is a collection of attribute objects that control how the XmlSerializer serializes and deserializes an object. This is useful when you're working with a class that is defined in an inaccessible source.
+
+The `XmlAttributes` class is a collection of attribute objects that control how the `XmlSerializer` serializes and deserializes an object. This is useful when you're working with a class that is defined in an inaccessible source.
 
 
 ```csharp
@@ -281,5 +281,5 @@ public static FontList DeserializeFontList(string xml)
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MjExMTQ5XX0=
+eyJoaXN0b3J5IjpbLTE4MzQwMDE4MTcsMTg4MjExMTQ5XX0=
 -->
