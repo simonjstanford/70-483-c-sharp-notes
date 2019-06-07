@@ -54,15 +54,10 @@ makecert -sk SignedByCA -iv Simon2CA.pvk -n "CN=*.simonjstanford.co.uk" -ic Simo
 ```
 
 3) Import the first certificate into the Trusted Root Certification Authorities store. Any certificates that are signed with the certificate will now be trusted by the computer. 
-	1. 
-Open the certificate snap-in and navigate to Local Computer or Current User.
-	2. 
-Open the Trusted Root Certification Authorities folder.
-	3. 
-Right click the Certificates folder -> all tasks -> import
-	4. 
-Import the certificate.
-
+	1.  Open the certificate snap-in and navigate to Local Computer or Current User.
+	2.  Open the Trusted Root Certification Authorities folder.
+	3.  Right click the Certificates folder -> all tasks -> import
+	4.  Import the certificate.
 
 
 4) Now you can use the certificate in a WCF service. 
@@ -71,5 +66,5 @@ https://msdn.microsoft.com/en-us/library/ms733813(v=vs.110).aspx
 https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTIzODAwMTBdfQ==
+eyJoaXN0b3J5IjpbMTI5NTIzNDQwMl19
 -->
