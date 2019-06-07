@@ -3,18 +3,18 @@
 - Strings can be moved around by the garbage collector, leaving multiple copies.
 - Strings aren't encrypted, so could be written as plain text on a page file or in a memory dump.
 - strings are immutable - changing leaves extra copies in memory.
-- `System.Secuirty.SecureString helps protect against this:
+- `System.Secuirty.SecureString` helps protect against this:
 	- It automatically encrypts the value.
 	- There is only a reference to a single memory location.
 	- Garbage collector doesn't move it.
 	- Mutable.
-	- Implements IDisposable so it can be removed from memory.
-	- For security, only one character at a time is added to a SecureString.
+	- Implements `IDisposable` so it can be removed from memory.
+	- For security, only one character at a time is added to a `SecureString`.
 
 Usage:
 
 
-
+```csharp
 //the using ensures that the SecureString is disposed
 using (SecureString securePwd = new SecureString())
 {
@@ -53,12 +53,12 @@ using (SecureString securePwd = new SecureString())
     }
     Console.ReadKey();
 }
+```
+
+You can convert a `SecureString` back to a normal string using the `Marshall` class to retrieve the data directly from memory:
 
 
-You can convert a SecureString back to a normal string using the Marshall class to retrieve the data directly from memory:
-
-
-
+```csharp
 public static void ConvertToUnsecureString(SecureString securePassword)
 {
     //the IntPtr is a pointer to a memory address
@@ -74,24 +74,12 @@ public static void ConvertToUnsecureString(SecureString securePassword)
         Marshal.ZeroFreeGlobalAllocUnicode(unmanagedString);
     }
 }
+```
 
+The `Marshall` class has several methods that can be used to decrypt `SecureString`. They each have an associated method for clearing the `SecureString` from memory:
 
-
-The Marshall class has several methods that can be used to decrypt SecureString. They each have an associated method for clearing the SecureString from memory:
-Decrypt Method
-Clear Memory Method
-SecureStringToBSTR
-ZeroFreeBSTR
-SecureStringToCoTaskMemAnsi
-ZeroFreeCoTaskMemAnsi
-SecureStringToCoTaskMemUnicode
-ZeroFreeCoTaskmemUnicode
-SecureStringToGlovalAllocAnsi
-ZeroFreeGlobalAllocAnsi
-SecureStringToGlobalAllocUnicode
-ZeroFreeGlobalAllocUnicode
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxOTM3NzMzMV19
+eyJoaXN0b3J5IjpbLTExNzA2Mjc1MDVdfQ==
 -->
