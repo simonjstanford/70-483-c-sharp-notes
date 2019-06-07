@@ -31,39 +31,27 @@ makecert -n "CN=WouterDeKort" -sr currentuser -ss simonsCertStore
 To generate a self signed certificate for development purposes you need to:
 
 1) Create a self signed certificate. Note:
-	* 
--n is the name of the certificate
-	* 
--r makes it self signed
-	* 
--sv creates a private key file 
-	* 
-Simon2.cer is the name of the certificate
+- -n is the name of the certificate
+- -r makes it self signed
+- -sv creates a private key file 
+- Simon2.cer is the name of the certificate
 
-
-
-
+```
 cd C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Bin
 makecert -n "CN=Simon2CA" -r -sv Simon2CA.pvk Simon2CA.cer
+```
 
 2) Create a new certificate signed by the root authority certificate and put it straight into a certificate store. When done, you can inspect the certificate in the certificate store and see that it isn't trusted. Note that the name should be the domain you are certifying.
-	* 
--sk is the location of the subject key container that holds the new private key. Create if doesn't exist.
-	* 
--iv is the issuer's private key file.
-	* 
--n is the name of the certificate.
-	* 
--ic the issuer's certificate
-	* 
--sr the registry location of the certificate store to use - either localmachine or currentuser
-	* 
--ss is the name of the subject's certificate store where the generated certificate will be stored.
+- -sk is the location of the subject key container that holds the new private key. Create if doesn't exist.
+- -iv is the issuer's private key file.
+- -n is the name of the certificate.
+- -ic the issuer's certificate
+- -sr the registry location of the certificate store to use - either localmachine or currentuser
+- -ss is the name of the subject's certificate store where the generated certificate will be stored.
 
-
-
-
+```
 makecert -sk SignedByCA -iv Simon2CA.pvk -n "CN=*.simonjstanford.co.uk" -ic Simon2CA.cer -sr localmachine -ss My
+```
 
 3) Import the first certificate into the Trusted Root Certification Authorities store. Any certificates that are signed with the certificate will now be trusted by the computer. 
 	1. 
@@ -83,5 +71,5 @@ https://msdn.microsoft.com/en-us/library/ms733813(v=vs.110).aspx
 https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDMzNzc2NTBdfQ==
+eyJoaXN0b3J5IjpbLTEzMTIzODAwMTBdfQ==
 -->
