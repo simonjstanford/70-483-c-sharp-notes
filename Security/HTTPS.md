@@ -20,6 +20,9 @@ Setting Up HTTPS
 https://www.digicert.com/csr-creation-microsoft-iis-7.htm
 https://www.digicert.com/ssl-certificate-installation-microsoft-iis-7.htm
 https://www.networking4all.com/en/support/ssl+certificates/manuals/microsoft/all+windows+servers/export+private+key+or+certificate/
+
+[web.config](../media/web.config)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMTkyMDc4MSwtNjkyMjAwMzYyXX0=
+eyJoaXN0b3J5IjpbLTYxOTMwMzgxMCwtNjkyMjAwMzYyXX0=
 -->
