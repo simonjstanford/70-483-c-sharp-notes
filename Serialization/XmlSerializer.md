@@ -140,11 +140,11 @@ public class VipOrder : Order
 }
 ```
 
-XmlAttributes
+## XmlAttributes
 The XmlAttributes class is a collection of attribute objects that control how the XmlSerializer serializes and deserializes an object. This is useful when you're working with a class that is defined in an inaccessible source.
 
 
-
+```csharp
 public class Orchestra
 {
     public Instrument[] Instruments;
@@ -279,7 +279,7 @@ public static FontList DeserializeFontList(string xml)
 
    return fontList;
 }
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMTQwNjgwNl19
+eyJoaXN0b3J5IjpbMTg4MjExMTQ5XX0=
 -->
