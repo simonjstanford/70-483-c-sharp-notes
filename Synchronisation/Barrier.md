@@ -2,10 +2,9 @@
 
 This is used when you have several threads and you want to make sure they all arrive at a certain point before continuing execution.
 
-
-
-
-
+![Barrier1](../media/Barrier.png)
+![Barrier2](../media/Barrier-2.png)
+![Barrier3](../media/Barrier-3.png)
 
 Example of usage:
 
@@ -45,5 +44,5 @@ barrier.SignalAndWait(); // Waiting at the second phase
 Console.WriteLine("Main thread is done!");
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNzkzNDQxOV19
+eyJoaXN0b3J5IjpbMTcyNjAwODI3NV19
 -->
