@@ -8,18 +8,18 @@ There are several attributes you can use:
 - `KeyAttribute`: specifies the primary key. The int property 'Id' is assumed to be a primary key.
 - `StringLengthAttribute` : the min/max character length of the field
 - `MaxLengthAttribute` : sets the max length of an array or string of the field
-- `ConcurrencyCheckAttribute` : specifies a property as to be included in a WHERE clause. Used to improve performance in large tables when there are multiple calls - http://stackoverflow.com/questions/23857104/why-we-use-concurrency-check-attribute-in-entity-framework. 
-- RequiredAttribute : a data field is required.
-- TimestampAttribute : specifies the datatype of the column as a row version.
-- ComplexTypeAttribute : denotes a property that has properties of its own but no primary key.
-- ColumnAttribute : the database column a property is mapped to.
-- TableAttribute : the table that a class is mapped to.
-- InversePropertyAttribute: http://jaliyaudagedara.blogspot.co.uk/2015/04/use-of-inversepropertyattribute-in.html
-- ForeignKeyAttribute: denotes a foreign key.
-- DatabaseGeneratedAttribute: determines how the database generates values for a property.
-- NotMappedAttribute: a property should be excluded from the database.
+- `ConcurrencyCheckAttribute` : specifies a property as to be included in a `WHERE` clause. Used to improve performance in large tables when there are multiple calls - http://stackoverflow.com/questions/23857104/why-we-use-concurrency-check-attribute-in-entity-framework. 
+- `RequiredAttribute` : a data field is required.
+- `TimestampAttribute` : specifies the datatype of the column as a row version.
+- `ComplexTypeAttribute` : denotes a property that has properties of its own but no primary key.
+- `ColumnAttribute` : the database column a property is mapped to.
+- `TableAttribute` : the table that a class is mapped to.
+- `InversePropertyAttribute`: http://jaliyaudagedara.blogspot.co.uk/2015/04/use-of-inversepropertyattribute-in.html
+- `ForeignKeyAttribute`: denotes a foreign key.
+- `DatabaseGeneratedAttribute`: determines how the database generates values for a property.
+- `NotMappedAttribute`: a property should be excluded from the database.
 
-
+[Entity Framework Example](../media/EntityFrameworkExample-2.zip)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzODQ3OTU5NF19
+eyJoaXN0b3J5IjpbLTExMjM5MjE1NV19
 -->
