@@ -5,7 +5,7 @@ Synchronisation events are objects that can be in one of two states: signaled an
 ## EventWaitHandle
 This represents a thread synchronisation event.
 
-
+![Table 7-11](../media/EventWaitHandle.png)
 
 Example of usage:
 
@@ -44,5 +44,5 @@ private static double DoStuff()
 There are two classes that inherit from `EventWaitHandle`: `AutoResetEvent` and `ManualResetEvent`. They just create an `EventWaitHandle` object with the mode as `EventResetMode.AutoReset` or `EventResetMode.ManualReset` accordingly.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjE3MzcxOTksMTA4OTk5Nzg5OF19
+eyJoaXN0b3J5IjpbMTMwMTc2MTksMTA4OTk5Nzg5OF19
 -->
