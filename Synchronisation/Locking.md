@@ -5,7 +5,7 @@ Mutual exclusion ensures only one thread at a time can access a resource. Thread
 ## Monitor
 This is a primitive synchronisation object. Only works with reference types because value types are copied for different threads and boxed into different references. All methods are static.
 
-
+![Locking1](../media/Locking.png)
 
 Example of usage:
 
@@ -18,16 +18,14 @@ Monitor.Exit(syncObject);
 
 ## Lock
 
-This above example wont release the lock if there is an exception, so you should place the Monitor.Exit() in a finally block. The 'lock' keyword can be used instead as it implicitly closes the monitor (like how a using statement works with Dispose().
+This above example wont release the lock if there is an exception, so you should place the `Monitor.Exit()` in a finally block. The `lock` keyword can be used instead as it implicitly closes the monitor (like how a using statement works with `Dispose()`.
 
 - it's good practice to keep this private to restrict what's using it
 - this object needs to be a reference type - a value type will be boxed so copies the value and breaks the mechanism
-- it's bad practice to use 'this' as the lock - another lock from outside of the object could be trying to lock the same object. This will be difficult to debug!
+- it's bad practice to use `this` as the lock - another lock from outside of the object could be trying to lock the same object. This will be difficult to debug!
 - don't use a string either - string-interning means that one string object could be use for multiple variables
 
-
-
-
+```csharp
 public static void LockExample()
 {
     //lock allows synchronisation of threads by only allowing access when the lock is released
@@ -59,7 +57,8 @@ public static void LockExample()
     Console.WriteLine(n);
     Console.ReadKey();
 }
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MDc3NzkyMCwtMTgwNjA3MzE3NF19
+eyJoaXN0b3J5IjpbLTExNjI2MTIwMTksLTE4MDYwNzMxNzRdfQ
+==
 -->
