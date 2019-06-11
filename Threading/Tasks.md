@@ -122,11 +122,13 @@ finalTask.Wait();
 Console.ReadKey();
 ```
 
+![Table 7-8](../media/Tasks-3.png)
 
 There are several options that can be passed to StartNew() via the TaskCreationOptions enumeration. It is decorated with the FlagsAttribute so options can be combined together.
 
+![Table 7-9](../media/Tasks-4.png)
 
-
+![Table 7-9b](../media/Tasks-5.png)
 
 https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcreationoptions(v=vs.110).aspx
 
@@ -184,5 +186,5 @@ To cancel the task, call CancellationTokenSource.Cancel().
 https://msdn.microsoft.com/en-us/library/system.threading.cancellationtokensource(v=vs.110).aspx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU1MjE4NDJdfQ==
+eyJoaXN0b3J5IjpbLTE5NDY4NDM4OTRdfQ==
 -->
