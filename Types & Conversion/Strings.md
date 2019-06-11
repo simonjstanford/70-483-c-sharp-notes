@@ -8,8 +8,7 @@
 
 ## StringWriter/StringReader
 
-This is a StringBuilder wrapper for when you want a TextWriter implementation but only need to store the output in memory, e.g. XMLWriter -> string
-
+This is a `StringBuilder` wrapper for when you want a `TextWriter` implementation but only need to store the output in memory, e.g. XMLWriter -> string
 
 ```csharp
 var stringWriter = new StringWriter();
@@ -69,7 +68,7 @@ https://msdn.microsoft.com/en-us/library/system.stringcomparison.aspx
 
 ## ToString()
 
-You can overload ToString() and add a string parameter to allow formatting options. This is similar to how d or D parameters work in DateTime.ToString():
+You can overload `ToString()` and add a string parameter to allow formatting options. This is similar to how d or D parameters work in `DateTime.ToString()`:
 
 ```csharp
 class Customer
@@ -91,7 +90,7 @@ class Customer
 
 ## CultureInfo
 
-Use a CultureInfo object to display dates, currency, etc. correctly. CultureInfo implements [IFormatProvider](../Interfaces/IFormatProvider%20&%20ICustomFormatter.md):
+Use a `CultureInfo` object to display dates, currency, etc. correctly. `CultureInfo` implements [`IFormatProvider`](../Interfaces/IFormatProvider%20&%20ICustomFormatter.md):
 
 
 ```csharp
@@ -101,7 +100,7 @@ Console.WriteLine(cost.ToString("C", new CultureInfo("en-GB")));
 
 
 ## IFormatProvider
-See [IFormatProvider](../Interfaces/IFormatProvider%20&%20ICustomFormatter.md)
+See [`IFormatProvider`](../Interfaces/IFormatProvider%20&%20ICustomFormatter.md)
 
 
 ## String.Format
@@ -121,5 +120,5 @@ There are many formatting options:
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MDA5OTg4NCwxNzEyNTI1MTY5XX0=
+eyJoaXN0b3J5IjpbMTAxNzg3MjE1MiwxNzEyNTI1MTY5XX0=
 -->
