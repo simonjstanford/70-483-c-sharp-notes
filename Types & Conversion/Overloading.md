@@ -1,12 +1,11 @@
 # Overloading
 
 Many operators can be overloaded:
-- `+` (unary), `−` (unary), `!`, `˜`, `++`,`−−`, `+`, `−`, `*`,  `/`, `%`, `&`, `|`, `^`, `<<`, `>>`, `==`, `!=`, `>`, <, >= , <=.
-- Implicit/explicit operations can be overloaded with the implicit and explicit keywords.
-- true/false
-- Compound operators (e.g. +=, -=) are implicitly overloaded when their component operators are overridden.
-- Conditional operators && and || are overridden when overriding the bitwise operators & and |.
-
+- `+` (unary), `−` (unary), `!`, `˜`, `++`,`−−`, `+`, `−`, `*`,  `/`, `%`, `&`, `|`, `^`, `<<`, `>>`, `==`, `!=`, `>`, `<`, `>=` , `<=`.
+- Implicit/explicit operations can be overloaded with the `implicit` and `explicit` keywords.
+- `true`/`false`
+- Compound operators (e.g. `+=`, `-=`) are implicitly overloaded when their component operators are overridden.
+- Conditional operators `&&` and `||` are overridden when overriding the bitwise operators & and |.
 
 
 Overloading works using the operator function. Rules:
@@ -19,7 +18,7 @@ Overloading works using the operator function. Rules:
 
 E.g:
 
-
+```csharp
 public struct Note
 {
     int value;
@@ -34,13 +33,13 @@ public struct Note
         return new Note (x.value + semitones);
     }
 }
+```
 
-
-Overloading Equality and Comparison Operators
+## Overloading Equality and Comparison Operators
 Rules:
-- If an operator has a logical opposite then they both must be defined: == and !=, < and >, <= and >=.
-- If you overload == and != then you should override Equals() and GetHashCode().
-- If you overload (<  >) and (<= >=) then you should implement IComparable and IComparable<T>
+- If an operator has a logical opposite then they both must be defined: `==` and `!=`, `<` and `>`, `<=` and `>=`.
+- If you overload `==` and `!=` then you should override `Equals()` and `GetHashCode()`.
+- If you overload (`<  >`) and (`<= >=) then you should implement IComparable and IComparable<T>
 
 
 
@@ -65,5 +64,5 @@ Note n = (Note)554.37; // explicit conversion
 double x = n; // implicit conversion
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg4OTYxNzE0LC02ODI1NTAzMjVdfQ==
+eyJoaXN0b3J5IjpbLTEyMTkwOTE4MTcsLTY4MjU1MDMyNV19
 -->
