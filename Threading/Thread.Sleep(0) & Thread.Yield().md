@@ -13,11 +13,22 @@ From MSDN, the argument in `Thread.Sleep()` is:
 
 https://msdn.microsoft.com/en-us/library/d00bd51t(v=vs.110).aspx
 
-From MSDN, the function of Thread.Yield() is:
+From MSDN, the function of `Thread.Yield()` is:
 
-Causes the calling thread to yield execution to another thread that is ready to run on the current processor. The operating system selects the thread to yield to. If this method succeeds, the rest of the thread's current time slice is yielded. The operating system schedules the calling thread for another time slice, according to its priority and the status of other threads that are available to run. Yielding is limited to the processor that is executing the calling thread. The operating system will not switch execution to another processor, even if that processor is idle or is running a thread of lower priority. If there are no other threads that are ready to execute on the current processor, the operating system does not yield execution, and this method returns false.
+> Causes the calling thread to yield execution to another thread that is
+> ready to run on the current processor. The operating system selects
+> the thread to yield to. If this method succeeds, the rest of the
+> thread's current time slice is yielded. The operating system schedules
+> the calling thread for another time slice, according to its priority
+> and the status of other threads that are available to run. Yielding is
+> limited to the processor that is executing the calling thread. The
+> operating system will not switch execution to another processor, even
+> if that processor is idle or is running a thread of lower priority. If
+> there are no other threads that are ready to execute on the current
+> processor, the operating system does not yield execution, and this
+> method returns false.
 
 https://msdn.microsoft.com/en-us/library/system.threading.thread.yield.aspx
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTEzMjkxNjM1XX0=
+eyJoaXN0b3J5IjpbMTgxMzYzMTE0MV19
 -->
