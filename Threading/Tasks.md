@@ -124,7 +124,7 @@ Console.ReadKey();
 
 ![Table 7-8](../media/Tasks-3.png)
 
-There are several options that can be passed to StartNew() via the TaskCreationOptions enumeration. It is decorated with the FlagsAttribute so options can be combined together.
+There are several options that can be passed to `StartNew()` via the `TaskCreationOptions` enumeration. It is decorated with the `FlagsAttribute` so options can be combined together.
 
 ![Table 7-9](../media/Tasks-4.png)
 
@@ -132,9 +132,9 @@ There are several options that can be passed to StartNew() via the TaskCreationO
 
 https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcreationoptions(v=vs.110).aspx
 
-WaitAll() lets you wait for an array of tasks to finish:
+`WaitAll()` lets you wait for an array of tasks to finish:
 
-
+```csharp
 Task[] tasks = new Task[3];
 
 tasks[0] = Task.Run(() =>
@@ -164,27 +164,24 @@ int i = Task.WaitAny(tasks);
 Task<int> completedTask = tasks[i];
 
 Console.ReadKey();
+```
 
-WhenAll() lets you schedule a continuation method after all Tasks have finished. WaitAny() lets you wait until one of the tasks is finished. An optional parameter lets you set a timeout:
+`WhenAll()` lets you schedule a continuation method after all Tasks have finished. `WaitAny()` lets you wait until one of the tasks is finished. An optional parameter lets you set a timeout:
 
-
+```csharp
 int i = Task.WaitAny(tasks, 1000);
 Task< int> completedTask = tasks[i];
-
+```
 
 Cancelling Tasks
 This is done as follows:
-	1. 
-Create a CancellationTokenSource object.
-	2. 
-CancellationTokenSource.Token is passed to the task.
-	3. 
-To cancel the task, call CancellationTokenSource.Cancel().
 
-
+1. Create a CancellationTokenSource object.
+2. CancellationTokenSource.Token is passed to the task.
+3. To cancel the task, call CancellationTokenSource.Cancel().
 
 https://msdn.microsoft.com/en-us/library/system.threading.cancellationtokensource(v=vs.110).aspx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDY4NDM4OTRdfQ==
+eyJoaXN0b3J5IjpbLTE0OTgwNzA3MjhdfQ==
 -->
