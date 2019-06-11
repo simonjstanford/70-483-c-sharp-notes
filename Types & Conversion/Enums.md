@@ -35,7 +35,7 @@ public enum MyColors
 var str = MyColors.Yellow | MyColors.Green
 ```
 
-What is happening is that the numbers for each enum item above are powers of 2 and a bitwise `AND` is used to join them together, so:
+What is happening is that the numbers for each enum item above are powers of 2 and a bitwise ANDing is used to join them together, so:
 
 Yellow: 00000001
 Green:  00000010
@@ -44,7 +44,7 @@ Blue:   00001000
 
 Means that str is '00000011' and so the selected enum items can be inferred. Note than 'None' should always be of value '0' and not used in the bitwise ANDing.
 
-All the [Flags] attribute does is provide an overridden ToString() method - the output of the above without the attribute is '5'.
+All the `[Flags]` attribute does is provide an overridden `ToString()` method - the output of the above without the attribute is '5'.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg5MzI0NjE2LC0xMDI0NzE5MDNdfQ==
+eyJoaXN0b3J5IjpbOTM3NjE0MjE4LC0xMDI0NzE5MDNdfQ==
 -->
