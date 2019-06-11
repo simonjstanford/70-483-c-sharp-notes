@@ -66,11 +66,11 @@ Console.ReadKey();
 https://msdn.microsoft.com/en-us/library/system.stringcomparison.aspx
 
 
-ToString()
+## ToString()
+
 You can overload ToString() and add a string parameter to allow formatting options. This is similar to how d or D parameters work in DateTime.ToString():
 
-
-
+```csharp
 class Customer
 {
     public string FirstName { get; set; }
@@ -86,10 +86,10 @@ class Customer
         }
     }
 }
+```
 
+## CultureInfo
 
-
-CultureInfo
 Use a CultureInfo object to display dates, currency, etc. correctly. CultureInfo implements IFormatProvider:
 
 
@@ -123,5 +123,5 @@ https://msdn.microsoft.com/en-us/library/ee372287(v=vs.110).aspx
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNTA3ODA2MSwxNzEyNTI1MTY5XX0=
+eyJoaXN0b3J5IjpbLTI4MTA0OTIyMiwxNzEyNTI1MTY5XX0=
 -->
