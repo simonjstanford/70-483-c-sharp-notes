@@ -126,9 +126,9 @@ Console.ReadKey();
 
 There are several options that can be passed to `StartNew()` via the `TaskCreationOptions` enumeration. It is decorated with the `FlagsAttribute` so options can be combined together.
 
-![Table 7-9](../media/Tasks-4.png)
+![Table 7-9](../media/Tasks-5.png)
 
-![Table 7-9b](../media/Tasks-5.png)
+![Table 7-9b](../media/Tasks-4.png)
 
 https://msdn.microsoft.com/en-us/library/system.threading.tasks.taskcreationoptions(v=vs.110).aspx
 
@@ -183,5 +183,5 @@ This is done as follows:
 https://msdn.microsoft.com/en-us/library/system.threading.cancellationtokensource(v=vs.110).aspx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTgwNzA3MjhdfQ==
+eyJoaXN0b3J5IjpbLTEzNDEwNjgwMDZdfQ==
 -->
