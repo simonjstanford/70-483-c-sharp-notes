@@ -25,7 +25,8 @@ http://stackoverflow.com/questions/12977838/queueuserworkitem-with-delegate-does
 
 https://msdn.microsoft.com/en-us/library/4yd16hza(v=vs.110).aspx
 
-
+![Table 7-2](../media/Table%207-2a.PNG)
+![Table 7-2](../media/Table%207-2b.PNG)
 
 https://msdn.microsoft.com/en-us/library/02x3daw5(v=vs.110).aspx 
 
@@ -46,5 +47,6 @@ Normally, the thread pool isn't used directly. Instead, you would use something 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MjEzMTE5MCwxMTgwNDMwNTUxXX0=
+eyJoaXN0b3J5IjpbMTQ2MTMzNjMxNywtNTkyMTMxMTkwLDExOD
+A0MzA1NTFdfQ==
 -->
