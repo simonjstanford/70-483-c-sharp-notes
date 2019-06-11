@@ -91,38 +91,35 @@ class Customer
 
 ## CultureInfo
 
-Use a CultureInfo object to display dates, currency, etc. correctly. CultureInfo implements IFormatProvider:
+Use a CultureInfo object to display dates, currency, etc. correctly. CultureInfo implements [IFormatProvider](../Interfaces/IFormatProvider%20&%20ICustomFormatter.md):
 
 
-
+```csharp
 double cost = 19.99;
 Console.WriteLine(cost.ToString("C", new CultureInfo("en-GB")));
+```
 
 
+## IFormatProvider
+See [IFormatProvider](../Interfaces/IFormatProvider%20&%20ICustomFormatter.md)
 
-IFormatProvider
-See IFormatProvider & ICustomFormatter.
 
-
-String.Format
+## String.Format
 This can be used to format a string. The following code outputs the same value in character format, decimal and hexadecimal. 
 
-
+```csharp
 int i = 163;
 Console.WriteLine(string.Format("{0} {1,4} 0x{2:X}", (char)i, i, i));
 Console.Read();
+```
 
 There are many formatting options:
-	* 
-https://msdn.microsoft.com/en-us/library/0c899ak8(v=vs.110).aspx
-	* 
-https://msdn.microsoft.com/en-us/library/8kb3ddd4(v=vs.110).aspx
-	* 
-https://msdn.microsoft.com/en-us/library/c3s1ez6e(v=vs.110).aspx
-	* 
-https://msdn.microsoft.com/en-us/library/ee372287(v=vs.110).aspx
+- https://msdn.microsoft.com/en-us/library/0c899ak8(v=vs.110).aspx
+- https://msdn.microsoft.com/en-us/library/8kb3ddd4(v=vs.110).aspx
+- https://msdn.microsoft.com/en-us/library/c3s1ez6e(v=vs.110).aspx
+- https://msdn.microsoft.com/en-us/library/ee372287(v=vs.110).aspx
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjA4NzkwOTIsMTcxMjUyNTE2OV19
+eyJoaXN0b3J5IjpbMTk5MDA5OTg4NCwxNzEyNTI1MTY5XX0=
 -->
