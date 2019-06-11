@@ -13,15 +13,17 @@ catch (AggregateException aex)
 }
 ```
 
-Handle
-Handle() provides a method of catching only specific types of exceptions and re-throwing the rest. This is the method signature - it takes a predicate that it runs over every inner exception:
+## Handle
 
+`Handle()` provides a method of catching only specific types of exceptions and re-throwing the rest. This is the method signature - it takes a predicate that it runs over every inner exception:
 
+```csharp
 public void Handle(Func<Exception, bool> predicate)
+```
 
-If the predicate returns true then it considers that exception handled. Any exceptions in AggregateException.InnerExceptions that returned false are bundled into a new AggregateException, and this is re-thrown:
+If the predicate returns true then it considers that exception handled. Any exceptions in `AggregateException.InnerExceptions` that returned false are bundled into a new `AggregateException`, and this is re-thrown:
 
-
+```csharp
 catch (AggregateException aex)
 {
     aex.Flatten().Handle (ex => // Note that we still need to call Flatten
@@ -40,8 +42,9 @@ catch (AggregateException aex)
 
         return false; // All other exceptions will get rethrown
 });
+```
 
 https://msdn.microsoft.com/en-us/library/dd997415.aspx
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NjQzOTQ3OF19
+eyJoaXN0b3J5IjpbMTAyNTk5MzI0Nl19
 -->
