@@ -1,20 +1,18 @@
 # Tasks
 
 Tasks can be created in several ways:
-- Create an instance of Task and call Start().
-- Call TaskFactory.StartNew().
-- Call Task.Run() - this is a wrapper for TaskFactory.StartNew().
-- Call one of the continuation methods - WhenAll, WhenAny, ContinueWhenAll, ContinueWhenAny.
+- Create an instance of `Task` and call `Start()`.
+- Call` TaskFactory.StartNew()`.
+- Call `Task.Run()` - this is a wrapper for `TaskFactory.StartNew()`.
+- Call one of the continuation methods - `WhenAll`, `WhenAny`, `ContinueWhenAll`, `ContinueWhenAny`.
 
 ![Table 7-6](../media/Tasks.png)
 
 ![Table 7-7](../media/Tasks-2.png)
 
+A Task object tells you if work has been completed and what the result is. Use Task when there is no return value and `Task<T>` when there is:
 
-
-A Task object tells you if work has been completed and what the result is. Use Task when there is no return value and Task<T> when there is:
-
-
+```csharp
 Task t1 = Task.Run(() =>
 {
     for (int i = 0; i < 100; i++)
@@ -39,10 +37,11 @@ t1.Wait(); //wait for the task to finish
 Console.WriteLine(t2.Result);
 
 Console.ReadKey();
+```
 
-ContinueWith() allows something to execute after a task has finished. There are overloads that let you handle tasks completing, cancelling and throwing an exception:
+`ContinueWith()` allows something to execute after a task has finished. There are overloads that let you handle tasks completing, cancelling and throwing an exception:
 
-
+```csharp
 Task<int> t = Task.Run(() =>
 {
     return 42;
@@ -66,10 +65,11 @@ var completedTask = t.ContinueWith((i) =>
 completedTask.Wait();
 
 Console.ReadKey();
+```
 
 A task can also have child tasks:
 
-
+```csharp
 Task<Int32[]> parent = Task.Run(() =>
     {
         var results = new Int32[3];
@@ -91,10 +91,11 @@ var finalTask = parent.ContinueWith(parentTask =>
 finalTask.Wait();
 
 Console.ReadKey();
+```
 
 A task factory can be used to start multiple tasks with the same options. This is the code above simplified:
 
-
+```csharp
 Task<Int32[]> parent = Task.Run(() =>
 {
     var results = new Int32[3];
@@ -119,7 +120,7 @@ var finalTask = parent.ContinueWith(parentTask =>
 finalTask.Wait();
 
 Console.ReadKey();
-
+```
 
 
 There are several options that can be passed to StartNew() via the TaskCreationOptions enumeration. It is decorated with the FlagsAttribute so options can be combined together.
@@ -183,5 +184,5 @@ To cancel the task, call CancellationTokenSource.Cancel().
 https://msdn.microsoft.com/en-us/library/system.threading.cancellationtokensource(v=vs.110).aspx
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzA4MTMyMzJdfQ==
+eyJoaXN0b3J5IjpbODU1MjE4NDJdfQ==
 -->
