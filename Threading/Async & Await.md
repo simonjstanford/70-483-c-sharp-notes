@@ -55,7 +55,7 @@ static async void SaveSomethingAsync()
 }
 ```
 
-When there are several tasks that need awaiting you can await WhenAll:
+When there are several tasks that need awaiting you can await `WhenAll`:
 
 ```csharp
 private async Task GetDataAsync()
@@ -67,6 +67,7 @@ private async Task GetDataAsync()
 
      //do stuff with task1.Result and task2.Result
 }
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MzQzMDI0MF19
+eyJoaXN0b3J5IjpbMTAwNzM2NTk3Ml19
 -->
