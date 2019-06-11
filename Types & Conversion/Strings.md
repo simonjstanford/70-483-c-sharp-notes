@@ -7,6 +7,7 @@
 
 
 ## StringWriter/StringReader
+
 This is a StringBuilder wrapper for when you want a TextWriter implementation but only need to store the output in memory, e.g. XMLWriter -> string
 
 
@@ -123,5 +124,5 @@ https://msdn.microsoft.com/en-us/library/ee372287(v=vs.110).aspx
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MTA0OTIyMiwxNzEyNTI1MTY5XX0=
+eyJoaXN0b3J5IjpbLTEyNjA4NzkwOTIsMTcxMjUyNTE2OV19
 -->
