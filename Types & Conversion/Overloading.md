@@ -39,15 +39,14 @@ public struct Note
 Rules:
 - If an operator has a logical opposite then they both must be defined: `==` and `!=`, `<` and `>`, `<=` and `>=`.
 - If you overload `==` and `!=` then you should override `Equals()` and `GetHashCode()`.
-- If you overload (`<  >`) and (`<= >=) then you should implement IComparable and IComparable<T>
+- If you overload (`<  >`) and (`<= >=`) then you should implement `IComparable` and `IComparable<T>`
 
 
-
-
-Custom Implicit/Explicit Conversions
+## Custom Implicit/Explicit Conversions
 Used to convert strongly related types. If the two types aren't strongly related then use a constructor or specific method for the conversion. Remember that implicit conversions are guaranteed to succeed and don't lose information. Explicit conversions happen when the cast may not succeed or information will be lost. Custom conversions are ignored by the 'as' and 'is' operators.
 
 
+```csharp
 // Convert to hertz
 public static implicit operator double (Note x)
 {
@@ -62,7 +61,7 @@ public static explicit operator Note (double x)
 
 Note n = (Note)554.37; // explicit conversion
 double x = n; // implicit conversion
-
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTkwOTE4MTcsLTY4MjU1MDMyNV19
+eyJoaXN0b3J5IjpbLTEwOTgwMjM0MTQsLTY4MjU1MDMyNV19
 -->
