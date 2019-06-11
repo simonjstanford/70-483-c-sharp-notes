@@ -6,11 +6,11 @@ There are several concurrent collections that are designed to be thread safe. Th
 
 Concurrent collections:
 
-![Concurrent Collections 1](../media/Concurrent_Collections.png)
+![Concurrent Collections 1](../media/Concurrent_Collections-2.png)
 
 Example of usage:
 
-
+```csharp
 public static void BlockingCollectionExample()
 {
     //BlockingCollection<T> is a thread safe collection for adding/removing data.
@@ -147,9 +147,9 @@ public static void ConcurrentDictionaryExample()
 
     Console.ReadKey();
 }
-
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY5NDE0NTAxXX0=
+eyJoaXN0b3J5IjpbLTExNDk4ODA2MjddfQ==
 -->
