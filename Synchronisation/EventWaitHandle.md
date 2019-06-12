@@ -1,6 +1,6 @@
 # EventWaitHandle
 
-Synchronisation events are objects that can be in one of two states: signaled and nonsignaled. If a thread needs something to be done by another thread, it can use a synchronisation event and interrogate the state of the event as a communication mechanism. If it is signaled, it continues the execution. If not, it blocks the execution waiting for the event to be signalled. Synchronisation events are implemented by two classes: EventWaitHandle and CountdownEvent.
+Synchronisation events are objects that can be in one of two states: signaled and nonsignaled. If a thread needs something to be done by another thread, it can use a synchronisation event and interrogate the state of the event as a communication mechanism. If it is signaled, it continues the execution. If not, it blocks the execution waiting for the event to be signalled. Synchronisation events are implemented by two classes: EventWaitHandle and [CountdownEvent](CountdownEvent.md).
 
 ## EventWaitHandle
 This represents a thread synchronisation event.
@@ -44,5 +44,6 @@ private static double DoStuff()
 There are two classes that inherit from `EventWaitHandle`: `AutoResetEvent` and `ManualResetEvent`. They just create an `EventWaitHandle` object with the mode as `EventResetMode.AutoReset` or `EventResetMode.ManualReset` accordingly.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMTc2MTksMTA4OTk5Nzg5OF19
+eyJoaXN0b3J5IjpbLTI0MjU5MDcxNCwxMzAxNzYxOSwxMDg5OT
+k3ODk4XX0=
 -->
