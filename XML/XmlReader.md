@@ -1,8 +1,8 @@
 # XmlReader
 
-An abstract base class and inherited by `XmlTextReader`, `XmlNodeReader` and XmlValidatingReader.
+An abstract base class and inherited by `XmlTextReader`, `XmlNodeReader` and `XmlValidatingReader`.
 
-
+```csharp
 string xml = @"<?xml version=""1.0"" encoding =""utf 8"" ?>
                 <people>
                     <person firstname =""john"" lastname =""doe"">
@@ -39,17 +39,19 @@ using (StringReader stringReader = new StringReader(xml))
         Console.WriteLine("Email address: {0}", emailAddress);
     }
 }
+```
 
 The above only outputs the first person element:
 
-
+```
 Person: john doe
 Contact Details
 Email address:  john@unknown.com
+```
 
 A more complete example:
 
-
+```csharp
 string xml = @"<?xml version=""1.0"" encoding =""utf 8"" ?>
     <people>
         <person firstname =""john"" lastname =""doe"">
@@ -105,10 +107,11 @@ using (StringReader stringReader = new StringReader(xml))
 }
 
 Console.Read();
+```
 
 Outputs:
 
-
+```
 Element: people
 Element: person
 --Attribute: firstname: john, System.String
@@ -124,8 +127,8 @@ Element: emailaddress
 --Value: jane@unknown.com, System.String
 Element: phonenumber
 --Value: 001122334455, System.String
-
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTExMjMzNjQzLC0xMzc4MTc4OTUxXX0=
+eyJoaXN0b3J5IjpbLTQ0ODEwMDk3NywtMTM3ODE3ODk1MV19
 -->
