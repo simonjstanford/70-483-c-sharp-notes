@@ -2,15 +2,14 @@
 
 XSD schema files can be created by using the XML Schema Definition Tool (Xsd.exe) via the visual studio command prompt. It can generate XML schema files or C# classes.
 
-If you execute xsd.exe "C:\person.xml" you get the following schema:
+If you execute `xsd.exe "C:\person.xml"` you get the following schema:
 
 [person.xml](../media/person.xml)
 [person.xsd](../media/person.xsd)
 
 XML can be validated using schemas:
 
-
-
+```csharp
 public void ValidateXml()
 {
     string xsdPath = "person.xsd";
@@ -38,10 +37,9 @@ private void MyValidationEventHandler(object sender, ValidationEventArgs e)
             break;
     }
 }
-
-
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MDE4NTE3NiwxMzA1MTYyNDcwXX0=
+eyJoaXN0b3J5IjpbMjQ2NDkwNDA1LDEzMDUxNjI0NzBdfQ==
 -->
