@@ -2,7 +2,7 @@
 
 - Dispose() is implemented to clean up unmanaged resources immediately.
 - Using a disposed object will cause an ObjectDisposedException.
-- See Finalization for an example.
+- See [Finalization](../Object%20Life%20Cycle/Finalization.md) for an example.
 
 Definition:
 
@@ -36,5 +36,5 @@ finally
 https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx
 https://msdn.microsoft.com/en-us/library/b1yfkh5e(v=vs.110).aspx
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxOTM1ODIwNV19
+eyJoaXN0b3J5IjpbNDgzOTEyMDQwLDE0MTkzNTgyMDVdfQ==
 -->
