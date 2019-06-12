@@ -13,7 +13,7 @@ A WCF service consists of:
 - A .svc file. Contains info on hosting the service in IIS. 
 - A code behind file with service logic.
 
-To create a WCF service you first need to define the contract. This is an interface with the `ServiceContract` and `OperationContract `attributes. The example below was created in Visual Studio by adding a new WCF Service website. You can then debug the application and view the WSDL info in a browser and execute the service using the WCF Test Client.
+To create a WCF service you first need to define the contract. This is an interface with the `ServiceContract` and `OperationContract` attributes. The example below was created in Visual Studio by adding a new WCF Service website. You can then debug the application and view the WSDL info in a browser and execute the service using the WCF Test Client.
 
 ```csharp
 [ServiceContract]
@@ -61,5 +61,5 @@ Console.WriteLine(result);
 Console.ReadKey();
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzMTU5MTg2M119
+eyJoaXN0b3J5IjpbMTU2NjczODk5OV19
 -->
