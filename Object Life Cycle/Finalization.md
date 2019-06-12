@@ -5,7 +5,7 @@
 - Finalization is a mechanism to clean up unmanaged objects before garbage collection.
 - Used for unmanaged resources - database connections, files, etc.
 - Finalizers only execute when the garbage collector tries to clean up an object.
-- Finalizers increase the life of an object as it is put in a finalization queue and a thread executes it. This means that garbage collection can be delayed. You shouldn't rely on the garbage collector to clean up unmanaged resources due to the randomness of clean up - us IDisposable instead. 
+- Finalizers increase the life of an object as it is put in a finalization queue and a thread executes it. This means that garbage collection can be delayed. You shouldn't rely on the garbage collector to clean up unmanaged resources due to the randomness of clean up - us [IDisposable](../Interfaces/IDisposable.md) instead. 
 - A distructor is defined in a class with a ~ and is converted into a finaliser.
 - Destructors can be defined in classes only, not structures. A class can have only one destructor.
 - Destructors cannot be inherited or overloaded.
@@ -56,5 +56,6 @@ class Test : IDisposable
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTgyNTU1OTVdfQ==
+eyJoaXN0b3J5IjpbLTEzNzY5MjE4MzAsLTEzNTgyNTU1OTVdfQ
+==
 -->
