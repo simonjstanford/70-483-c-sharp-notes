@@ -2,7 +2,7 @@
 
 - This is used to define custom sorting of an object.
 - The interface is implemented in a separate class that is passed as an argument into a sort method.  
-- Also see IComparable & IComparable.
+- Also see [IComparable & IComparable<T>](../Interfaces/IComparable%20&%20IComparable-T.md).
 
 https://msdn.microsoft.com/en-us/library/system.collections.icomparer(v=vs.110).aspx
 
@@ -69,5 +69,5 @@ public class Car
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MTE1MzgxXX0=
+eyJoaXN0b3J5IjpbMjgyODU5NzcwLDE5OTExNTM4MV19
 -->
