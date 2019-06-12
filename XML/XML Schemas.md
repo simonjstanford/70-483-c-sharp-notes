@@ -4,7 +4,8 @@ XSD schema files can be created by using the XML Schema Definition Tool (Xsd.exe
 
 If you execute xsd.exe "C:\person.xml" you get the following schema:
 
-
+[person.xml](../media/person.xml)
+[person.xml](../media/person.xml)
 
 XML can be validated using schemas:
 
@@ -42,5 +43,5 @@ private void MyValidationEventHandler(object sender, ValidationEventArgs e)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNTE2MjQ3MF19
+eyJoaXN0b3J5IjpbMTk3MDQzOTcwNCwxMzA1MTYyNDcwXX0=
 -->
