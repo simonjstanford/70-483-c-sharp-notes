@@ -60,12 +60,12 @@ public class Zoo
 There is no Add or Remove methods in CollectionBase - these are added as you
 see fit.
 
-Also see Indexers
+Also see [Indexers](../Types%20&%20Conversion/Indexers.md)
 
 ![Table 9-7](../media/Table9-7.png)
 ![Table 9-8](../media/Table9-8.png)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg0MjkyNTY1LDE5MDk0NDkwNTYsMzkxMT
-YxNzM4XX0=
+eyJoaXN0b3J5IjpbMTkyMjUwODk3NCw5ODQyOTI1NjUsMTkwOT
+Q0OTA1NiwzOTExNjE3MzhdfQ==
 -->
