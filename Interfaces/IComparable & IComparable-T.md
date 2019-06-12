@@ -1,7 +1,7 @@
 # IComparable & IComparable<T>
 
 - Compares objects to allow sorting.
-- Also see IComparer & IComparer.
+- Also see [IComparer & IComparer<T>](../Interfaces/IComparer%20&%20IComparer-T.md).
 - Implementing this interface doesn't mean that > and < should be overloaded - this should only be done if there is a strong concept of greater/less than in the objects. Sorting objects is different from greater/less than!
 
 
@@ -118,5 +118,5 @@ namespace IComparableExample
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY1MzMxMzc4XX0=
+eyJoaXN0b3J5IjpbODk5Nzc5MzksNzY1MzMxMzc4XX0=
 -->
