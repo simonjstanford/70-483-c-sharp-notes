@@ -1,33 +1,5 @@
 # 70-483-c-sharp-notes
 
-- [70-483-c-sharp-notes](readme.md#70483csharpnotes)
-	- [ADO.NET](readme.md#adonet)
-	- [Assemblies](readme.md#assemblies)
-	- [Attributes](readme.md#attributes)
-	- [Collections](readme.md#collections)
-	- [Configuration](readme.md#configuration)
-	- [Constructors](readme.md#constructors)
-	- [Debugging](readme.md#debugging)
-	- [Delegates & Events](readme.md#delegates-events)
-	- [Exceptions](readme.md#exceptions)
-	- [Interfaces](readme.md#interfaces)
-	- [Interoperability](readme.md#interoperability)
-	- [IO Operations](readme.md#io-operations)
-	- [LINQ](readme.md#linq)
-	- [media](readme.md#media)
-	- [Networking](readme.md#networking)
-	- [Object Life Cycle](readme.md#object-life-cycle)
-	- [Operators](readme.md#operators)
-	- [Reflection](readme.md#reflection)
-	- [Regex](readme.md#regex)
-	- [Security](readme.md#security)
-	- [Serialization](readme.md#serialization)
-	- [Synchronisation](readme.md#synchronisation)
-	- [The Entity Framework](readme.md#the-entity-framework)
-	- [Threading](readme.md#threading)
-	- [Types & Conversion](readme.md#types-conversion)
-	- [WCF](readme.md#wcf)
-	- [XML](readme.md#xml)
 
 
 ## ADO.NET
